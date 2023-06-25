@@ -29,9 +29,11 @@ const Table = () => {
   }, [groupSelected]);
 
   return (
-    <div className="shadow-lg rounded-b-lg flex flex-col w-[100%] md:w-[70%] lg:w-[50%] items-center">
-      <div className="bg-secondary-color rounded-t-lg text-white w-[100%] flex justify-center items-center h-[3rem] ">
-        <span className="font-bold ">Student's Blood Group</span>
+    <div className="shadow-lg rounded-b-lg flex flex-col w-[100%] md:w-[70%] lg:w-[50%] items-center h-max">
+      <div className="bg-primary-color rounded-t-lg text-white w-[100%] flex justify-center items-center h-[3rem] ">
+        <span className="font-bold text-[1.5rem] font-[Helvetica] ">
+          Student's Blood Group
+        </span>
       </div>
       <div className="flex mt-4 w-[100%] justify-between">
         <div className="flex items-center ml-2">
@@ -42,7 +44,7 @@ const Table = () => {
             onChange={handleGroup}
             name="group"
             id="group"
-            className="ml-4 rounded-lg w-[6rem] cursor-pointer bg-secondary-color outline-none text-white p-1"
+            className="ml-4 rounded-lg w-[6rem] cursor-pointer bg-primary-color outline-none text-white p-1"
           >
             <option value="all">All</option>
             <option value="A+">A+</option>
@@ -83,7 +85,7 @@ const Table = () => {
               >
                 <td className=" p-2">{item.name}</td>
                 <td className=" p-2">{item.blood}</td>
-                <td className="bp-2">{item.address}</td>
+                <td className=" p-2">{item.address}</td>
                 <td className=" p-2">{item.contact}</td>
               </motion.tr>
             ))}

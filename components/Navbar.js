@@ -18,7 +18,7 @@ const Navbar = () => {
           href="/"
           className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
         >
-          <Image src="/logofsu.png" width={80} height={80} />
+          <Image alt="fsu logo" src="/logofsu.png" width={80} height={80} />
           <div className="flex flex-col">
             <span className="ml-3 text-xl">FSU</span>
             <span className="ml-3 text-sm">Purwanchal Campus, Dharan</span>
@@ -30,7 +30,7 @@ const Navbar = () => {
             setOpenNav(!openNav);
           }}
         >
-          <Image width={30} height={30} src="/icons/menu.png" />
+          <Image alt="menu" width={30} height={30} src="/icons/menu.png" />
         </div>
 
         <div className="hidden lg:flex items-center">
