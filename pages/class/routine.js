@@ -1,7 +1,11 @@
 import React from "react";
 
 const Routine = () => {
-  return <div>Routine</div>;
+  return (
+    <div className="container mx-auto p-5">
+      <div></div>
+    </div>
+  );
 };
 
 export default Routine;

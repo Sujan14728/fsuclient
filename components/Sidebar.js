@@ -50,11 +50,11 @@ const Sidebar = ({ openNav, setOpenNav }) => {
         className="absolute left-10 top-10 cursor-pointer"
         onClick={() => setOpenNav(!openNav)}
       >
-        <Image alt="loading..." width={20} height={20} src="/icons/close.png" />
+        <Image alt="closebtn" width={20} height={20} src="/icons/close.png" />
       </div>
       <div className="relative flex flex-col text-black">
         <div className="flex justify-center items-center ">
-          <Image alt="loading..." src="/logofsu.png" width={250} height={250} />
+          <Image alt="fsu logo" src="/logofsu.png" width={250} height={250} />
         </div>
         <div className="relative flex flex-col items-center text-base justify-center ">
           <Link
@@ -95,7 +95,7 @@ const Sidebar = ({ openNav, setOpenNav }) => {
           </Link>
           <div
             onClick={() => setOpenClass(!openClass)}
-            className="relative cursor-pointer "
+            className="relative cursor-pointer"
             ref={ref}
           >
             <div
