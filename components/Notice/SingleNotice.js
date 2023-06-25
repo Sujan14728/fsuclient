@@ -24,7 +24,7 @@ const SingleNotice = ({ item }) => {
         </div>
       </div>
       <Link
-        href={`/notice/${item._id}`}
+        href={`/notice/${item.id}`}
         className="text-xl font-medium title-font text-gray-900 mt-2 cursor-pointer "
       >
         {item.title}
