@@ -11,7 +11,7 @@ const Notice = () => {
           {notice && notice.map((item) => <SingleNotice item={item} />)}
         </div>
       </div>
-      <div className="container hidden md:flex md:w-[20%] h-max px-5 py-4">
+      <div className="container hidden lg:flex md:w-[20%] h-max px-5 py-4">
         <RecentNotice />
       </div>
     </div>

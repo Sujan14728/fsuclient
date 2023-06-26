@@ -1,5 +1,5 @@
-import Image from "next/image"
-import React from "react"
+import Image from "next/image";
+import React from "react";
 
 const Contact = () => {
   return (
@@ -11,7 +11,7 @@ const Contact = () => {
         <input
           name="name"
           id="name"
-          className="text-black rounded border-0 p-1 mb-9 text-xl"
+          className="text-black rounded border-0 p-1 mb-9 text-xl outline-none"
           type="text"
         />
         <label htmlFor="email" className="text-xl">
@@ -20,7 +20,7 @@ const Contact = () => {
         <input
           name="email"
           id="email"
-          className="text-black rounded border-0 p-1 mb-9 text-xl"
+          className="text-black rounded border-0 p-1 mb-9 text-xl outline-none"
           type="email"
         />
         <label htmlFor="message" className="text-xl">
@@ -29,7 +29,7 @@ const Contact = () => {
         <textarea
           id="message"
           name="message"
-          className="text-black rounded border-0 p-1 mb-9 text-xl"
+          className="text-black rounded border-0 p-1 mb-9 text-xl outline-none"
           rows={5}
           cols={5}
         />
@@ -41,7 +41,7 @@ const Contact = () => {
         <Image src="/3372216.png" height={100} width={500} alt="Contact" />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
