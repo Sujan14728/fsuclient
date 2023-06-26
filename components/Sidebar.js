@@ -24,19 +24,19 @@ const Sidebar = ({ openNav, setOpenNav }) => {
     };
   }, []);
 
-  const classVariants = {
-    initial: { x: "-10rem", opacity: 0 },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: { staggerChildren: 0.15, ease: "easeInOut", duration: 0.5 },
-    },
-    exit: {
-      x: "10rem",
-      opacity: 0,
-      transition: { staggerChildren: 0.15, duration: 0.3 },
-    },
-  };
+  // const classVariants = {
+  //   initial: { x: "-10rem", opacity: 0 },
+  //   animate: {
+  //     x: 0,
+  //     opacity: 1,
+  //     transition: { staggerChildren: 0.15, ease: "easeInOut", duration: 0.5 },
+  //   },
+  //   exit: {
+  //     x: "10rem",
+  //     opacity: 0,
+  //     transition: { staggerChildren: 0.15, duration: 0.3 },
+  //   },
+  // };
 
   return (
     <motion.div
@@ -93,19 +93,15 @@ const Sidebar = ({ openNav, setOpenNav }) => {
           >
             Complain Box
           </Link>
-          <div
-            onClick={() => setOpenClass(!openClass)}
-            className="relative cursor-pointer"
-            ref={ref}
-          >
+          <Link href="/classroom" className="relative cursor-pointer">
             <div
-              className={`w-[15rem] flex justify-center items-center h-[3rem] hover:bg-[#165ef8] hover:text-white ${
-                openClass ? "bg-[#165ef8] text-white" : "bg-white text-black"
-              } `}
+              className={`w-[15rem] flex justify-center items-center h-[3rem] hover:bg-[#165ef8] hover:text-white 
+              
+              `}
             >
               <span>Class Details</span>
             </div>
-            <AnimatePresence>
+            {/* <AnimatePresence>
               {openClass && (
                 <motion.span
                   variants={classVariants}
@@ -115,9 +111,6 @@ const Sidebar = ({ openNav, setOpenNav }) => {
                   className="flex-col w-[15rem] text-black hover:bg-[#165ef8] justify-center items-center"
                 >
                   <motion.span
-                    // initial={{ opacity: 0, x: -100 }}
-                    // animate={{ opacity: 1, x: 0 }}
-                    // transition={{ duration: 0.5 }}
                     variants={classVariants}
                     className="py-2 w-[100%] flex justify-center hover:text-white hover:bg-[#165ef8]"
                   >
@@ -126,9 +119,6 @@ const Sidebar = ({ openNav, setOpenNav }) => {
                     </Link>
                   </motion.span>
                   <motion.span
-                    // initial={{ opacity: 0, x: -100 }}
-                    // animate={{ opacity: 1, x: 0 }}
-                    // transition={{ duration: 0.5 }}
                     variants={classVariants}
                     className="py-2 w-[100%] flex justify-center hover:text-white hover:bg-[#165ef8]"
                   >
@@ -136,8 +126,8 @@ const Sidebar = ({ openNav, setOpenNav }) => {
                   </motion.span>
                 </motion.span>
               )}
-            </AnimatePresence>
-          </div>
+            </AnimatePresence> */}
+          </Link>
           <Link href="/portal">
             <button className="inline-flex items-center bg-[#f3c1a9] text-[#F1682A] border-0 py-2 px-8 focus:outline-none hover:text-white hover:bg-[#F1682A] rounded text-base mt-6">
               Portal

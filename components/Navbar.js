@@ -103,22 +103,22 @@ const Navbar = () => {
             >
               Blood Group
             </Link>
-            <div
-              className={`group relative cursor-pointer flex mr-5 py-5  hover:border-b-2 ${
+            <Link
+              href="/classroom"
+              className={`mr-5 hover:border-b-2 hover:pb-1 ${
                 colorChange
                   ? "hover:border-white hover:text-white"
                   : "hover:border-[#EC6936] hover:text-[#EC6936]"
               }`}
             >
-              <span>Class Details</span>
-              <motion.img
+              Class Details
+              {/* <motion.img
                 src="/icons/down.png"
                 className={`scale-x-0 group-hover:scale-x-100 duration-300 object-contain ml-1`}
                 width={10}
                 height={10}
-              />
-
-              <span className="group-hover:flex hidden flex-col absolute top-16 -left-[50%] w-[14rem] rounded-2xl text-[#ffffff] bg-[#EC6936]  justify-center items-center ">
+              /> */}
+              {/* <span className="group-hover:flex hidden flex-col absolute top-16 -left-[50%] w-[14rem] rounded-2xl text-[#ffffff] bg-[#EC6936]  justify-center items-center ">
                 <Link
                   href="/class/routine"
                   className="py-2 w-[100%] flex justify-center  hover:text-white"
@@ -131,8 +131,8 @@ const Navbar = () => {
                 >
                   Teacher&apos;s Details
                 </Link>
-              </span>
-            </div>
+              </span> */}
+            </Link>
           </div>
           <Link href="/portal">
             <button
