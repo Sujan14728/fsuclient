@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`text-gray-600 body-font shadow duration-500 z-10 fixed w-[100%] ${
+      className={`text-gray-600 body-font shadow duration-500  sticky top-0 z-10  w-[100%] ${
         colorChange ? "bg-[#EC6936] text-white" : "bg-white"
       }`}>
       <AnimatePresence>
@@ -33,7 +33,13 @@ const Navbar = () => {
         <Link
           href="/"
           className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          <Image src="/logofsu.png" width={80} height={80} alt="FSU Logo" className={`duration-300 ${colorChange? "scale-90": "scale-100"}`} />
+          <Image
+            src="/logofsu.png"
+            width={80}
+            height={80}
+            alt="FSU Logo"
+            className={`duration-300 ${colorChange ? "scale-90" : "scale-100"}`}
+          />
           <div
             className={`flex flex-col ${
               colorChange ? "text-white" : "text-black"

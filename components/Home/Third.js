@@ -1,15 +1,148 @@
 import React from "react"
 import Image from "next/image"
 
-
 const Third = () => {
-    const committee = {
+  const committee = [
+    // { id: 0, name: "Nabin Shrestha", title: "President" },
+    {
+      id: 1,
+      name: "Saugat Bhattarai",
+      title: "Vice-President",
+      src: "/members/saugat.jpg",
+    },
+    {
+      id: 2,
+      name: "Rajan Yadav",
+      title: "Secretary",
+      src: "/members/rajanyadav.jpg",
+    },
+    {
+      id: 3,
+      name: "Manohar Kumar Singh",
+      title: "Vice-Secretary",
+      src: "/members/manoharsingh.jpg",
+    },
+    {
+      id: 4,
+      name: "Maheshwor Prasad Bhatt",
+      title: "Treasurer",
+      src: "/members/mpbhatt.jpg",
+    },
+    { id: 5, name: "Prasanga Dahal", title: "Member", src: "/members/" },
+    {
+      id: 6,
+      name: "Sejal Poddar",
+      title: "Member",
+      src: "/members/sejalpoddar.jpg",
+    },
+    {
+      id: 7,
+      name: "Sagar Bashyal",
+      title: "Member",
+      src: "/members/sagarbashyal.jpg",
+    },
+    {
+      id: 8,
+      name: "Abhishek Pangeni",
+      title: "Member",
+      src: "/members/abhishekpangeni.jpg",
+    },
 
-    }
-    
+
+    {
+      id: 11,
+      name: "Kushal Pandit",
+      title: "Member",
+      src: "/members/kushalpandit.jpg",
+    },
+
+    {
+      id: 9,
+      name: "Amir Karki",
+      title: "Member",
+      src: "/members/amirkarki.jpg",
+    },
+    {
+      id: 13,
+      name: "Ishor Dahal",
+      title: "Member",
+      src: "/members/ishordahal.jpg",
+    },
+    {
+      id: 10,
+      name: "Purushotaam Rijal",
+      title: "Member",
+      src: "/members/purshotaamrijal.jpg",
+    },
+    {
+      id: 12,
+      name: "Prabhav Katwal",
+      title: "Member",
+      src: "/members/prahbhav.jpg",
+    },
+    {
+      id: 14,
+      name: "Manisha Karki",
+      title: "Member",
+      src: "/members/manishakarki.jpg",
+    },
+    {
+      id: 15,
+      name: "Binita Gautam",
+      title: "Member",
+      src: "/members/binitagautam.jpg",
+    },
+    {
+      id: 16,
+      name: "Aayush Karki",
+      title: "Member",
+      src: "/members/aayushkarki.jpg",
+    },
+    {
+      id: 17,
+      name: "Sabin Dhital",
+      title: "Member",
+      src: "/members/sabindhital.jpg",
+    },
+    {
+      id: 18,
+      name: "Karan Magar",
+      title: "Member",
+      src: "/members/karanmagar.jpg",
+    },
+  ]
+
   return (
-    <div className="h-[100vh] w-[100%]">
-      <h3>FSU Committee 2080-82</h3>
+    <div className="h-[100%] w-[100%] my-10">
+      <h3 className="text-center text-3xl ">Meet the team</h3>
+      <div className="rounded p-4    text-center mx-10 xl:w-[50vw] mb-9 xl:mx-auto">
+        <Image
+          src="/members/nabinstha.jpg"
+          alt="nabin Shrestha"
+          width={500}
+          height={300}
+          className="bg-black rounded-lg mx-auto border-[10px] border-[#EC6936]"
+        />
+        <h3 className="text-xl font-bold text-center ">Nabin Shrestha</h3>
+        <p>President</p>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 px-10">
+        {committee?.map((item) => (
+          <div
+            key={item.id}
+            className="rounded p-4   text-center">
+            <Image
+              src={item.src}
+              alt={item.name}
+              width={300}
+              height={100}
+              className="bg-black rounded-lg mx-auto border-[7px] border-[#EC6936]"
+            />
+            <h3 className="text-xl font-bold text-center">{item.name}</h3>
+            <p>{item.title}</p>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
