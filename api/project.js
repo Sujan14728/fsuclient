@@ -1,0 +1,98 @@
+export const project = [
+  {
+    id: "1",
+    user_id: "",
+    user_name: "Sujan Ghimire",
+    project_image:
+      "https://res.cloudinary.com/dhbzqi4mp/image/upload/v1687743515/project1_gsgalw.jpg",
+    web_link: "https://www.ghimiresuzan.com.np/",
+    github: "",
+    category: "Website",
+    project_title: "First Project",
+    likes: 5,
+  },
+  {
+    id: "2",
+    user_id: "",
+    user_name: "Swikar Neupane",
+    project_image:
+      "https://res.cloudinary.com/dhbzqi4mp/image/upload/v1687743515/project1_gsgalw.jpg",
+    web_link: "",
+    github: "",
+    category: "UI/UX",
+    project_title: "First Project",
+    likes: 15,
+  },
+  {
+    id: "3",
+    user_id: "",
+    user_name: "Yashwan Kafle",
+    project_image:
+      "https://res.cloudinary.com/dhbzqi4mp/image/upload/v1687743515/project1_gsgalw.jpg",
+    web_link: "",
+    github: "",
+    category: "AI",
+    project_title: "First Project",
+    likes: 12,
+  },
+  {
+    id: "4",
+    user_id: "",
+    user_name: "Prashanta Pandey",
+    project_image:
+      "https://res.cloudinary.com/dhbzqi4mp/image/upload/v1687743515/project1_gsgalw.jpg",
+    web_link: "",
+    github: "",
+    category: "Android App",
+    project_title: "First Project",
+    likes: 14,
+  },
+  {
+    id: "5",
+    user_id: "",
+    user_name: "Sujan Ghimire",
+    project_image:
+      "https://res.cloudinary.com/dhbzqi4mp/image/upload/v1687743515/project1_gsgalw.jpg",
+    web_link: "",
+    github: "",
+    category: "Electronics",
+    project_title: "First Project",
+    likes: 9,
+  },
+  {
+    id: "6",
+    user_id: "",
+    user_name: "Sujan Ghimire",
+    project_image:
+      "https://res.cloudinary.com/dhbzqi4mp/image/upload/v1687743515/project1_gsgalw.jpg",
+    web_link: "",
+    github: "",
+    category: "Robotics",
+    project_title: "First Project",
+    likes: 6,
+  },
+  {
+    id: "7",
+    user_id: "",
+    user_name: "Sujan Ghimire",
+    project_image:
+      "https://res.cloudinary.com/dhbzqi4mp/image/upload/v1687743515/project1_gsgalw.jpg",
+    web_link: "",
+    github: "",
+    category: "Robotics",
+    project_title: "First Project",
+    likes: 6,
+  },
+  {
+    id: "8",
+    user_id: "",
+    user_name: "Sujan Ghimire",
+    project_image:
+      "https://res.cloudinary.com/dhbzqi4mp/image/upload/v1687743515/project1_gsgalw.jpg",
+    web_link: "",
+    github: "",
+    category: "Robotics",
+    project_title: "First Project",
+    likes: 6,
+  },
+];

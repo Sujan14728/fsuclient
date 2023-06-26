@@ -44,7 +44,7 @@ const Sidebar = ({ openNav, setOpenNav }) => {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, x: -100 }}
       transition={{ duration: 0.25 }}
-      className="absolute flex top-0 left-0 items-center justify-center w-[100vw] h-[100vh] bg-white "
+      className="absolute flex top-0 left-0 items-center justify-center w-[100vw] h-[100vh] bg-white z-[100] "
     >
       <div
         className="absolute left-10 top-10 cursor-pointer"
