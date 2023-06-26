@@ -70,7 +70,7 @@ const DonorForm = () => {
         </div>
         <div className="flex flex-col w-[100%] p-4">
           <label htmlFor="patient_age" className="font-[Helvetica] mb-2 ">
-            Patient's Age:
+            Patient&apos;s Age:
           </label>
           <input
             type="text"
