@@ -28,8 +28,8 @@ const RecentNotice = () => {
         <span className="font-bold text-2xl text-[#f87563] ">Recent News</span>
       </div>
       {recentNews &&
-        recentNews.map((item) => (
-          <div>
+        recentNews.map((item, i) => (
+          <div key={i}>
             <div className="flex items-start mb-6  py-2">
               <img
                 alt="notice"

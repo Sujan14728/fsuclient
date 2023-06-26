@@ -8,7 +8,8 @@ const Notice = () => {
     <div className="flex justify-center w-[100vw] ">
       <div className="container md:w-[60%] px-5 py-4">
         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-          {notice && notice.map((item) => <SingleNotice item={item} />)}
+          {notice &&
+            notice.map((item, i) => <SingleNotice key={i} item={item} />)}
         </div>
       </div>
       <div className="container hidden lg:flex md:w-[20%] h-max px-5 py-4">
