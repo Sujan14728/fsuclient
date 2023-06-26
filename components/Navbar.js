@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`text-gray-600 body-font shadow duration-500 sticky top-0 z-10 w-[100%] ${
+      className={`text-gray-600 body-font shadow duration-500 sticky top-0 z-10  w-[100%] ${
         colorChange ? "bg-[#EC6936] text-white" : "bg-white"
       }`}
     >
@@ -38,6 +38,7 @@ const Navbar = () => {
         >
           <Image
             src={colorChange ? "/fsu.png" : "/logofsu.png"}
+
             width={80}
             height={80}
             alt="FSU Logo"
