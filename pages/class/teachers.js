@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Teachers = () => {
-  return (
-    <div>Teachers</div>
-  )
-}
+  return <div className="container mx-auto p-5">Teachers</div>;
+};
 
-export default Teachers
+export default Teachers;
