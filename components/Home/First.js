@@ -1,17 +1,20 @@
 import React from "react";
 import Image from "next/image";
-// import { Inter } from "next/font/google";
-import Link from "next/link";
 
-// const inter = Inter({ subsets: ["latin"] });
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 const First = () => {
   return (
-    <div
+    <motion.div
       className={`font-[Helvetica] w-[100%] h-[90vh] flex justify-center mt-10`}
     >
       <div className="w-[80%] flex flex-col xl:flex-row items-center ">
-        <div className="md:w-[60%]">
+        <motion.div
+          className="md:w-[60%]"
+          initial={{ x: -100, y: -100 }}
+          whileInView={{ x: 0, y: 0, transition: { duration: 1 } }}
+        >
           <Image
             src="/undraw_showing_support_re_5f2v.svg"
             alt="FSU"
@@ -19,8 +22,12 @@ const First = () => {
             width={800}
             className=""
           />
-        </div>
-        <div className="flex flex-col md:w-[50%] mt-10">
+        </motion.div>
+        <motion.div
+          className="flex flex-col md:w-[50%] mt-10"
+          initial={{ x: 100, y: -100 }}
+          whileInView={{ x: 0, y: 0, transition: { duration: 1 } }}
+        >
           <h1 className="text-4xl uppercase font-extrabold text-white bg-gradient-to-r from-background-color to-secondary-color rounded w-max px-5 py-3">
             Free Student Union
           </h1>
@@ -39,9 +46,9 @@ const First = () => {
           >
             About Us
           </Link>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

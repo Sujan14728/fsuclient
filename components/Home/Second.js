@@ -2,13 +2,18 @@ import React from "react";
 
 // import { env } from "@next/env";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Second = () => {
   return (
     <div
       className={`w-[100%] justify-center items-center flex flex-col-reverse xl:flex-row  relative bg-background-color text-white  `}
     >
-      <div className="xl:w-[55%] w-[90%] flex flex-col items-center mt-4">
+      <motion.div
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
+        className="xl:w-[55%] w-[90%] flex flex-col items-center mt-4"
+      >
         <h2 className="font-extrabold text-3xl mb-6">
           What our president has to say
         </h2>
@@ -31,8 +36,12 @@ const Second = () => {
             President (FSU Purwanchal Campus, Dharan)
           </p>
         </div>
-      </div>
-      <div className="w-[80%] lg:w-[40%] ">
+      </motion.div>
+      <motion.div
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
+        className="w-[80%] lg:w-[40%] "
+      >
         <Image
           src="/nabinstha-removebg-preview.png"
           alt="FSU President"
@@ -40,7 +49,7 @@ const Second = () => {
           width={700}
           className=""
         />
-      </div>
+      </motion.div>
     </div>
   );
 };

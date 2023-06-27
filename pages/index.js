@@ -8,16 +8,29 @@ import Fourth from "@/components/Home/Fourth";
 import Contact from "@/components/Home/Contact";
 // import { env } from "@next/env";
 const inter = Inter({ subsets: ["latin"] });
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="w-[100vw] flex flex-col items-center ">
-      <First />
-      <Second />
-      <Third />
-      <Fourth />
-      <Contact />
-      <Footer />
-    </div>
+    <motion.div className="w-[100vw] flex flex-col items-center ">
+      <div>
+        <First />
+      </div>
+      <div>
+        <Second />
+      </div>
+      <div>
+        <Third />
+      </div>
+      <div className="w-full">
+        <Fourth />
+      </div>
+      <div>
+        <Contact />
+      </div>
+      <div>
+        <Footer />
+      </div>
+    </motion.div>
   );
 }
