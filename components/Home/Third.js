@@ -19,11 +19,15 @@ const Third = () => {
     hidden: { opacity: 0, x: -200 },
     show: { opacity: 1, x: 0 },
   };
+  const variants = {
+    hidden: { opacity: 0, y: -100 },
+    show: { opacity: 1, y: 0 },
+  };
   return (
-    <div className="h-[100%] w-[100%] my-10">
+    <div className="h-[100%] w-[100%] my-10 flex flex-col border-2 items-center">
       <h3 className="text-center text-3xl ">Meet the team</h3>
       <motion.div
-        className="rounded p-4 text-center mx-10 xl:w-[50vw] mb-9 xl:mx-auto"
+        className="rounded p-4 text-center mx-10 xl:w-[50vw] flex flex-col items-center mb-9 relative"
         viewport={{ once: true }}
         initial={{ x: -100, opacity: 0 }}
         whileInView={{
@@ -32,15 +36,28 @@ const Third = () => {
           transition: { duration: 1 },
         }}
       >
-        <Image
-          src="/members/nabinstha.jpg"
-          alt="nabin Shrestha"
-          width={500}
-          height={300}
-          className="bg-black rounded-lg mx-auto"
-        />
-        <h3 className="text-xl font-bold text-center ">Nabin Shrestha</h3>
-        <p>President</p>
+        <div className="w-[100%] flex justify-center ">
+          <Image
+            src="/members/nabinstha.jpg"
+            alt="nabin Shrestha"
+            width={500}
+            height={300}
+            className="bg-black rounded-lg"
+          />
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1, delay: 1 },
+          }}
+          className="w-[40%] flex flex-col items-center absolute bottom-0 bg-white rounded-xl shadow-xl "
+        >
+          <h3 className="text-xl font-bold text-center ">Nabin Shrestha</h3>
+          <p>President</p>
+        </motion.div>
       </motion.div>
       <AnimatePresence>
         <motion.div
@@ -53,22 +70,28 @@ const Third = () => {
           {committee?.map((item) => (
             <motion.div
               key={item.id}
-              className="rounded p-4 text-center relative"
+              className="rounded p-4 text-center flex justify-center relative mx-14"
               // initial={{ x: 100 }}
               // whileInView={{ x: 0, transition: { bounce } }}
               variants={itemVariants}
             >
-              <div>
+              <div className="w-[100%] flex justify-center">
                 <Image
                   src={item.src}
                   alt={item.name}
                   width={300}
                   height={100}
-                  className="bg-black rounded-lg mx-auto"
+                  className="bg-black rounded-lg mx-auto object-cover"
                 />
+              </div>
+              <motion.div
+                variants={variants}
+                transition={{ duration: 1 }}
+                className="min-w-[40%] max-w-full flex flex-col items-center absolute bottom-0 bg-white rounded-xl shadow-xl px-4 py-1"
+              >
                 <h3 className="text-xl font-bold text-center">{item.name}</h3>
                 <p>{item.title}</p>
-              </div>
+              </motion.div>
             </motion.div>
           ))}
         </motion.div>
