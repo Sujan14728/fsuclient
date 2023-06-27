@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -13,14 +14,15 @@ const SingleNotice = ({ item }) => {
 
   return (
     <div className="p-4 w-full h-full md:w-1/2 lg:w-1/3 sm:mb-0 mb-6">
-      <div className="rounded-lg h-[18rem] md:h-[10rem] overflow-hidden">
-        <div className="h-full w-full bg-gradient-to-tr from-background-color to-secondary-color">
-          <img
-            alt="content"
-            className="object-contain object-center h-full w-full"
-            src="/fsu.png"
-          />
-        </div>
+      <div className="h-[18rem] md:h-[10rem] flex justify-center items-center rounded-lg overflow-hidden bg-gradient-to-tr from-background-color to-secondary-color">
+        <Image
+          width={160}
+          height={160}
+          alt="content"
+          className="object-contain object-center"
+          src="/fsu.png"
+          priority
+        />
       </div>
       <Link
         href={`/notice/${item.id}`}
