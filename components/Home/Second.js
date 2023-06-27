@@ -32,7 +32,7 @@ const Second = () => {
           </p>
         </div>
       </div>
-      <div className=" lg:w-[40%] ">
+      <div className="w-[80%] lg:w-[40%] ">
         <Image
           src="/nabinstha-removebg-preview.png"
           alt="FSU President"

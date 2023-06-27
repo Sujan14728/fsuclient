@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { donors } from "@/api/donors";
 import { motion, AnimatePresence } from "framer-motion";
 const Table = () => {
-  const [filteredData, setFilteredData] = useState(donors);
+  const [filteredData, setFilteredData] = useState();
   const [groupSelected, setGroupSelected] = useState("all");
   const [selectedPage, setSelectedPage] = useState(1);
-  const [paginatedBtn, setPaginatedBtn] = useState();
+  const [paginatedBtn, setPaginatedBtn] = useState(1);
 
   const handleFilter = () => {
     let LimitedFilter = [];
@@ -104,8 +104,11 @@ const Table = () => {
               filteredData.map((item, i) => (
                 <motion.tr
                   key={i}
-                  initial={{ x: "10rem" }}
-                  animate={{ x: 0 }}
+                  initial={{ opacity: 0, x: "10rem" }}
+                  animate={{
+                    opacity: 100,
+                    x: 0,
+                  }}
                   exit={{ x: "-10rem", opacity: 0 }}
                   transition={{ duration: 0.5 }}
                 >
@@ -118,6 +121,7 @@ const Table = () => {
           </AnimatePresence>
         </tbody>
       </table>
+      {/* {!filteredData && <div>No Data to show</div>} */}
       <div className="flex absolute bottom-0 mt-2">
         <div>
           <button

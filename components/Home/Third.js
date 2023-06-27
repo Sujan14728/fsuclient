@@ -58,15 +58,17 @@ const Third = () => {
               // whileInView={{ x: 0, transition: { bounce } }}
               variants={itemVariants}
             >
-              <Image
-                src={item.src}
-                alt={item.name}
-                width={300}
-                height={100}
-                className="bg-black rounded-lg mx-auto"
-              />
-              <h3 className="text-xl font-bold text-center">{item.name}</h3>
-              <p>{item.title}</p>
+              <div>
+                <Image
+                  src={item.src}
+                  alt={item.name}
+                  width={300}
+                  height={100}
+                  className="bg-black rounded-lg mx-auto"
+                />
+                <h3 className="text-xl font-bold text-center">{item.name}</h3>
+                <p>{item.title}</p>
+              </div>
             </motion.div>
           ))}
         </motion.div>
