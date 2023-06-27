@@ -21,6 +21,7 @@ const First = () => {
             height={800}
             width={800}
             className=""
+            priority
           />
         </motion.div>
         <motion.div
@@ -28,10 +29,12 @@ const First = () => {
           initial={{ x: 100, y: -100 }}
           whileInView={{ x: 0, y: 0, transition: { duration: 1 } }}
         >
-          <h1 className="text-4xl uppercase font-extrabold text-white bg-gradient-to-r from-background-color to-secondary-color rounded w-max px-5 py-3">
+          <h1 className="text-2xl md:text-4xl uppercase font-extrabold text-white bg-gradient-to-r from-background-color to-secondary-color rounded w-max px-5 py-3">
             Free Student Union
           </h1>
-          <p className="uppercase px-2 text-lg mb-5">ioe purwanchal campus</p>
+          <p className="uppercase px-2 text-base md:text-lg mb-5">
+            ioe purwanchal campus
+          </p>
           <p className="border-0 pl-2 mb-2 border-background-color">
             Lorem ipsum dolor sit amet. Ea dicta deleniti sit nobis beatae est
             autem officia sed inventore sunt et magnam expedita? Est repellat

@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import Second from "@/components/Home/Second";
 import First from "@/components/Home/First";
 import Third from "@/components/Home/Third";
-import Footer from "@/components/Home/Footer";
+import Footer from "@/components/Footer";
 import Fourth from "@/components/Home/Fourth";
 import Contact from "@/components/Home/Contact";
 // import { env } from "@next/env";
@@ -27,9 +27,6 @@ export default function Home() {
       </div>
       <div className="w-full mb-8 ">
         <Contact />
-      </div>
-      <div className="w-full border-2">
-        <Footer />
       </div>
     </motion.div>
   );

@@ -71,8 +71,6 @@ const Third = () => {
             <motion.div
               key={item.id}
               className="rounded p-4 text-center flex justify-center relative mx-6 md:mx-14"
-              // initial={{ x: 100 }}
-              // whileInView={{ x: 0, transition: { bounce } }}
               variants={itemVariants}
             >
               <div className="w-[100%] flex justify-center">
@@ -86,13 +84,18 @@ const Third = () => {
               </div>
               <motion.div
                 variants={variants}
-                transition={{ duration: 1 }}
+                transition={{
+                  duration: 1,
+                  type: "spring",
+                  damping: 10,
+                  stiffness: 300,
+                }}
                 className="min-w-[40%] max-w-full flex flex-col items-center absolute bottom-0 bg-white rounded-xl shadow-xl px-4 py-1"
               >
-                <h3 className="text-[0.7rem] font-bold text-center lg:text-base">
+                <h3 className="text-[0.6rem] font-bold text-center lg:text-base">
                   {item.name}
                 </h3>
-                <p className="lg:text-base text-[0.7rem] ">{item.title}</p>
+                <p className="lg:text-base text-[0.5rem] ">{item.title}</p>
               </motion.div>
             </motion.div>
           ))}
