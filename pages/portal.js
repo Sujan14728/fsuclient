@@ -5,7 +5,7 @@ import Form from "@/components/Portal/Form";
 const Portal = () => {
   const [loggedin, setLoggedin] = useState(false);
   return (
-    <div className="container mx-auto p-5">
+    <div className="w-[100vw] flex justify-center items-center h-[80vh]">
       {loggedin ? <Form /> : <Login />}
     </div>
   );

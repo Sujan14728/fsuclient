@@ -63,12 +63,12 @@ const Sidebar = ({ openNav, setOpenNav }) => {
           >
             Home
           </Link>
-          <Link
+          {/* <Link
             href="/about"
             className="w-[15rem] flex justify-center items-center h-[3rem] hover:text-white hover:bg-[#165ef8]"
           >
             About us
-          </Link>
+          </Link> */}
           <Link
             href="/notice"
             className="w-[15rem] flex justify-center items-center h-[3rem] hover:text-white hover:bg-[#165ef8]"
@@ -87,12 +87,12 @@ const Sidebar = ({ openNav, setOpenNav }) => {
           >
             Blood Group
           </Link>
-          <Link
+          {/* <Link
             href="/complain"
             className="w-[15rem] flex justify-center items-center h-[3rem] hover:text-white hover:bg-[#165ef8]"
           >
             Complain Box
-          </Link>
+          </Link> */}
           <Link href="/classroom" className="relative cursor-pointer">
             <div
               className={`w-[15rem] flex justify-center items-center h-[3rem] hover:bg-[#165ef8] hover:text-white 
@@ -129,7 +129,7 @@ const Sidebar = ({ openNav, setOpenNav }) => {
             </AnimatePresence> */}
           </Link>
           <Link href="/portal">
-            <button className="inline-flex items-center bg-[#f3c1a9] text-[#F1682A] border-0 py-2 px-8 focus:outline-none hover:text-white hover:bg-[#F1682A] rounded text-base mt-6">
+            <button className="inline-flex items-center bg-[#09078377] text-white border-0 py-2 px-8 focus:outline-none hover:text-white hover:bg-background-color rounded text-base mt-6">
               Portal
               <svg
                 fill="none"

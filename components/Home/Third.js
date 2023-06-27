@@ -24,7 +24,7 @@ const Third = () => {
     show: { opacity: 1, y: 0 },
   };
   return (
-    <div className="h-[100%] w-[100%] my-10 flex flex-col border-2 items-center">
+    <div className="h-[100%] w-[100%] my-10 flex flex-col items-center">
       <h3 className="text-center text-3xl ">Meet the team</h3>
       <motion.div
         className="rounded p-4 text-center mx-10 xl:w-[50vw] flex flex-col items-center mb-9 relative"
@@ -65,12 +65,12 @@ const Third = () => {
           viewport={{ once: true }}
           initial="hidden"
           whileInView="show"
-          className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 px-10"
+          className="grid grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 lg:gap-2"
         >
           {committee?.map((item) => (
             <motion.div
               key={item.id}
-              className="rounded p-4 text-center flex justify-center relative mx-14"
+              className="rounded p-4 text-center flex justify-center relative mx-6 md:mx-14"
               // initial={{ x: 100 }}
               // whileInView={{ x: 0, transition: { bounce } }}
               variants={itemVariants}
@@ -89,8 +89,10 @@ const Third = () => {
                 transition={{ duration: 1 }}
                 className="min-w-[40%] max-w-full flex flex-col items-center absolute bottom-0 bg-white rounded-xl shadow-xl px-4 py-1"
               >
-                <h3 className="text-xl font-bold text-center">{item.name}</h3>
-                <p>{item.title}</p>
+                <h3 className="text-[0.7rem] font-bold text-center lg:text-base">
+                  {item.name}
+                </h3>
+                <p className="lg:text-base text-[0.7rem] ">{item.title}</p>
               </motion.div>
             </motion.div>
           ))}
