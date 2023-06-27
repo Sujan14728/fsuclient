@@ -49,8 +49,8 @@ const Login = () => {
             transition: {
               delay: 1.5,
               type: "spring",
-              stiffness: 200,
-              damping: 7,
+              stiffness: 100,
+              damping: 10,
               duration: 2,
             },
           }}
