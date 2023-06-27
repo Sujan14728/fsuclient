@@ -29,7 +29,7 @@ const DonorForm = () => {
   };
 
   return (
-    <div className="h-max w-[100%] lg:w-[45%] shadow-lg rounded-lg mt-14">
+    <div className="h-max w-[100%] lg:w-[48%] shadow-lg rounded-lg mt-14">
       <form>
         <div className="flex justify-center ">
           <span className="font-bold text-2xl text-background-color ">
@@ -88,7 +88,7 @@ const DonorForm = () => {
           <label className="font-[Helvetica] mb-2 ">
             Requested Blood Group:
           </label>
-          <div className="mt-2 flex w-[30rem] justify-between ">
+          <div className="mt-2 flex md:w-[30rem] gap-2 ">
             <div>
               <input
                 type="radio"
