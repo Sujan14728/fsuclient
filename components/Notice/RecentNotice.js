@@ -25,13 +25,13 @@ const RecentNotice = () => {
   return (
     <div className="shadow-lg shadow-[#07040334] rounded-lg p-4">
       <div>
-        <span className="font-bold text-2xl text-[#f87563] ">Recent News</span>
+        <span className="font-bold text-2xl text-[#2e4f96] ">Recent News</span>
       </div>
       {recentNews &&
         recentNews.map((item, i) => (
           <div key={i}>
             <div className="flex items-start mb-6  py-2">
-              <img
+              <Image
                 alt="notice"
                 width={20}
                 height={20}
@@ -39,7 +39,7 @@ const RecentNotice = () => {
                 className="object-contain mt-1"
               />
               <Link href={`/notice/${item.id}`}>
-                <span className="ml-2 font-semibold text-[1.2rem] leading-[1.5rem]">
+                <span className="ml-2 font-semibold text-[1.2rem] leading-[1.5rem] hover:text-background-color ">
                   {item.title}
                 </span>
               </Link>

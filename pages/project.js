@@ -30,11 +30,13 @@ const Project = () => {
     let btn = document.querySelectorAll("#filter")[0];
     btn = btn.children;
     for (let i = 0; i < btn.length; i++) {
-      btn[i].classList.remove("bg-[#fa8c25c9]");
-      btn[i].classList.add("hover:bg-[#f0a1685e]");
+      btn[i].classList.remove("bg-background-color");
+      btn[i].classList.add("hover:bg-[#22168e4f]");
+      btn[i].classList.remove("text-white");
       if (selectedOption === btn[i].value) {
-        btn[i].classList.add("bg-[#fa8c25c9]");
-        btn[i].classList.remove("hover:bg-[#f0a1685e]");
+        btn[i].classList.add("bg-background-color");
+        btn[i].classList.remove("hover:bg-[#22168e4f]");
+        btn[i].classList.add("text-white");
       }
     }
   };
@@ -53,7 +55,7 @@ const Project = () => {
               setSelectedOption(e.target.value);
             }}
             value="all"
-            className="p-2 hover:bg-[#f0a1685e] rounded-lg mr-1 "
+            className="p-2 hover:bg-[#22168e4f] rounded-lg mr-1 "
           >
             All
           </button>
@@ -62,7 +64,7 @@ const Project = () => {
               setSelectedOption(e.target.value);
             }}
             value="Website"
-            className="p-2 hover:bg-[#f0a1685e] rounded-lg mr-1 "
+            className="p-2 hover:bg-[#22168e4f] rounded-lg mr-1 "
           >
             Website
           </button>
@@ -71,7 +73,7 @@ const Project = () => {
               setSelectedOption(e.target.value);
             }}
             value="UI/UX"
-            className="p-2 hover:bg-[#f0a1685e] rounded-lg mr-1 "
+            className="p-2 hover:bg-[#22168e4f] rounded-lg mr-1 "
           >
             UI/UX
           </button>
@@ -80,7 +82,7 @@ const Project = () => {
               setSelectedOption(e.target.value);
             }}
             value="AI"
-            className="p-2 hover:bg-[#f0a1685e] rounded-lg mr-1 "
+            className="p-2 hover:bg-[#22168e4f] rounded-lg mr-1 "
           >
             AI
           </button>
@@ -89,7 +91,7 @@ const Project = () => {
               setSelectedOption(e.target.value);
             }}
             value="Android App"
-            className="p-2 hover:bg-[#f0a1685e] rounded-lg mr-1 "
+            className="p-2 hover:bg-[#22168e4f] rounded-lg mr-1 "
           >
             Android App
           </button>
@@ -98,7 +100,7 @@ const Project = () => {
               setSelectedOption(e.target.value);
             }}
             value="Electronics"
-            className="p-2 hover:bg-[#f0a1685e] rounded-lg mr-1 "
+            className="p-2 hover:bg-[#22168e4f] rounded-lg mr-1 "
           >
             Electronics
           </button>
@@ -107,7 +109,7 @@ const Project = () => {
               setSelectedOption(e.target.value);
             }}
             value="Robotics"
-            className="p-2 hover:bg-[#f0a1685e] rounded-lg mr-1 "
+            className="p-2 hover:bg-[#22168e4f] rounded-lg mr-1 "
           >
             Robotics
           </button>

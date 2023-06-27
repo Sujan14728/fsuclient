@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <div
       className={`text-gray-600 body-font shadow duration-500 sticky top-0 z-10  w-[100%] ${
-        colorChange ? "bg-[#EC6936] text-white" : "bg-white"
+        colorChange ? "bg-background-color text-white" : "bg-white"
       }`}
     >
       <AnimatePresence>
@@ -38,7 +38,6 @@ const Navbar = () => {
         >
           <Image
             src={colorChange ? "/fsu.png" : "/logofsu.png"}
-
             width={80}
             height={80}
             alt="FSU Logo"
@@ -69,7 +68,7 @@ const Navbar = () => {
               className={`mr-5 hover:border-b-2 hover:pb-1 ${
                 colorChange
                   ? "hover:border-white hover:text-white"
-                  : "hover:border-[#EC6936] hover:text-[#EC6936]"
+                  : "hover:border-background-color"
               }`}
             >
               Home
@@ -79,7 +78,7 @@ const Navbar = () => {
               className={`mr-5 hover:border-b-2 hover:pb-1 ${
                 colorChange
                   ? "hover:border-white hover:text-white"
-                  : "hover:border-[#EC6936] hover:text-[#EC6936]"
+                  : "hover:border-background-color"
               }`}
             >
               Notice
@@ -89,7 +88,7 @@ const Navbar = () => {
               className={`mr-5 hover:border-b-2 hover:pb-1 ${
                 colorChange
                   ? "hover:border-white hover:text-white"
-                  : "hover:border-[#EC6936] hover:text-[#EC6936]"
+                  : "hover:border-background-color"
               }`}
             >
               Project
@@ -99,7 +98,7 @@ const Navbar = () => {
               className={`mr-5 hover:border-b-2 hover:pb-1 ${
                 colorChange
                   ? "hover:border-white hover:text-white"
-                  : "hover:border-[#EC6936] hover:text-[#EC6936]"
+                  : "hover:border-background-color"
               }`}
             >
               Blood Group
@@ -109,7 +108,7 @@ const Navbar = () => {
               className={`mr-5 hover:border-b-2 hover:pb-1 ${
                 colorChange
                   ? "hover:border-white hover:text-white"
-                  : "hover:border-[#EC6936] hover:text-[#EC6936]"
+                  : "hover:border-background-color"
               }`}
             >
               Class Details
@@ -137,10 +136,10 @@ const Navbar = () => {
           </div>
           <Link href="/portal">
             <button
-              className={`inline-flex items-center bg-[#f3c1a9] text-[#F1682A] border-0 py-2 px-8 focus:outline-none transition ease-in-out delay-[5000] hover:text-white rounded text-base mt-4 md:mt-0 ${
+              className={`inline-flex items-center bg-secondary-color text-fourth-color hover:text-secondary-color border-0 py-2 px-8 focus:outline-none transition ease-in-out delay-[5000]  rounded text-base mt-4 md:mt-0 ${
                 colorChange
-                  ? "hover:bg-white hover:text-[#EC6936]"
-                  : "hover:bg-[#EC6936] hover:text-white"
+                  ? "hover:bg-white hover:text-secondary-color"
+                  : "hover:bg-background-color hover:text-white "
               }
       `}
             >

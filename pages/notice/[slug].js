@@ -56,7 +56,7 @@ const NoticeSlug = () => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl text-[#f87563] font-extrabold font-[Arial]"
+              className="text-4xl text-black font-extrabold font-[Arial]"
             >
               {news.title}
             </motion.h1>

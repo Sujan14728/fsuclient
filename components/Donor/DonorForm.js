@@ -32,7 +32,7 @@ const DonorForm = () => {
     <div className="h-max w-[100%] lg:w-[45%] shadow-lg rounded-lg mt-14">
       <form>
         <div className="flex justify-center ">
-          <span className="font-bold text-2xl ">
+          <span className="font-bold text-2xl text-background-color ">
             Request for Blood Donation
           </span>
         </div>
@@ -100,7 +100,7 @@ const DonorForm = () => {
               />
               <label
                 htmlFor="O-"
-                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] peer-checked:text-[#fc7629] peer-checked:border-[2px] peer-checked:border-[#fc7629]"
+                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color"
               >
                 O-
               </label>
@@ -116,7 +116,7 @@ const DonorForm = () => {
               />
               <label
                 htmlFor="O+"
-                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] peer-checked:text-[#fc7629] peer-checked:border-[2px] peer-checked:border-[#fc7629]"
+                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color"
               >
                 O+
               </label>
@@ -132,7 +132,7 @@ const DonorForm = () => {
               />
               <label
                 htmlFor="A-"
-                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] peer-checked:text-[#fc7629] peer-checked:border-[2px] peer-checked:border-[#fc7629]"
+                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color"
               >
                 A-
               </label>
@@ -148,7 +148,7 @@ const DonorForm = () => {
               />
               <label
                 htmlFor="A+"
-                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] peer-checked:text-[#fc7629] peer-checked:border-[2px] peer-checked:border-[#fc7629]"
+                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color"
               >
                 A+
               </label>
@@ -164,7 +164,7 @@ const DonorForm = () => {
               />
               <label
                 htmlFor="B-"
-                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] peer-checked:text-[#fc7629] peer-checked:border-[2px] peer-checked:border-[#fc7629]"
+                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color"
               >
                 B-
               </label>
@@ -180,7 +180,7 @@ const DonorForm = () => {
               />
               <label
                 htmlFor="B+"
-                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] peer-checked:text-[#fc7629] peer-checked:border-[2px] peer-checked:border-[#fc7629]"
+                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color"
               >
                 B+
               </label>
@@ -196,7 +196,7 @@ const DonorForm = () => {
               />
               <label
                 htmlFor="AB-"
-                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] peer-checked:text-[#fc7629] peer-checked:border-[2px] peer-checked:border-[#fc7629]"
+                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color"
               >
                 AB-
               </label>
@@ -212,7 +212,7 @@ const DonorForm = () => {
               />
               <label
                 htmlFor="AB+"
-                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] peer-checked:text-[#fc7629] peer-checked:border-[2px] peer-checked:border-[#fc7629]"
+                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color"
               >
                 AB+
               </label>
@@ -239,7 +239,7 @@ const DonorForm = () => {
         <div className="w-[100%] flex justify-center mb-4">
           <button
             onClick={handleSubmit}
-            className="py-4 px-8 hover:bg-primary-color bg-[#ff652975] transition-all duration-500 rounded-xl text-white"
+            className="py-4 px-8 hover:bg-[#253c80] bg-[#253c8080] transition-all duration-500 rounded-xl text-fourth-color"
           >
             Request Now
           </button>
