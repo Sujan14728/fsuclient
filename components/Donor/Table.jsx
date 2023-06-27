@@ -55,7 +55,7 @@ const Table = () => {
   }, [groupSelected, selectedPage]);
 
   return (
-    <div className="shadow-lg rounded-b-lg flex flex-col w-[100%] md:w-[70%] lg:w-[50%] items-center h-[50rem] relative">
+    <div className="shadow-lg rounded-b-lg flex flex-col w-[100%] md:w-[100%] lg:w-[50%] items-center min-h-[50rem] relative">
       <div className="bg-background-color rounded-t-lg text-white w-[100%] flex justify-center items-center h-[3rem] ">
         <span className="font-bold text-[1.5rem] font-[Helvetica] ">
           Student's Blood Group
