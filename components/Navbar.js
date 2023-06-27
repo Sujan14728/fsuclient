@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`text-gray-600 body-font shadow duration-500 sticky top-0 z-10  w-[100%] ${
+      className={`text-gray-600 body-font shadow duration-500 sticky top-0 z-10  w-[100vw] ${
         colorChange ? "bg-background-color text-white" : "bg-white"
       }`}
     >
@@ -53,12 +53,17 @@ const Navbar = () => {
           </div>
         </Link>
         <div
-          className="block lg:hidden cursor-pointer"
+          className="flex lg:hidden cursor-pointer"
           onClick={() => {
             setOpenNav(!openNav);
           }}
         >
-          <Image width={30} height={30} src="/icons/menu.png" alt="Menu" />
+          <Image
+            width={30}
+            height={30}
+            src={colorChange ? "/icons/menu-white.png" : "/icons/menu.png"}
+            alt="Menu"
+          />
         </div>
 
         <div className="hidden lg:flex items-center">

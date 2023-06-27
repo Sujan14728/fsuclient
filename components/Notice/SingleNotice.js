@@ -2,7 +2,6 @@ import Link from "next/link";
 import React from "react";
 
 const SingleNotice = ({ item }) => {
-  console.log(item);
   const date = new Date(item.createdAt);
 
   const formattedDate = date.toLocaleDateString("en-US", {
