@@ -25,10 +25,10 @@ export default function Home() {
       <div className="w-full">
         <Fourth />
       </div>
-      <div>
+      <div className="w-full mb-8 ">
         <Contact />
       </div>
-      <div>
+      <div className="w-full border-2">
         <Footer />
       </div>
     </motion.div>
