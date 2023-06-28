@@ -22,7 +22,7 @@ export default function Home() {
       <div className="w-full">
         <About />
       </div>
-      <div>
+      <div className="w-full bg-[#9487872d]">
         <Third />
       </div>
       <div className="w-full mb-8 ">

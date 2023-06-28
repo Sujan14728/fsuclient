@@ -24,7 +24,7 @@ const Third = () => {
     show: { opacity: 1, y: 0 },
   };
   return (
-    <div className="h-[100%] w-[100%] my-10 flex flex-col items-center">
+    <div className="h-[100%] w-[100%] my-10 flex flex-col items-center  ">
       <h3 className="text-center text-3xl ">Meet the team</h3>
       <motion.div
         className="rounded p-4 text-center mx-10 xl:w-[50vw] flex flex-col items-center mb-9 relative"
