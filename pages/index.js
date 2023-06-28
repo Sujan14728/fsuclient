@@ -13,10 +13,10 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <motion.div className="w-[100vw] flex flex-col items-center ">
-      <div>
+      <div className="border-2">
         <First />
       </div>
-      <div>
+      <div className="mt-72 xl:mt-0">
         <Second />
       </div>
       <div>

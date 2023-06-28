@@ -31,7 +31,7 @@
     overflow-x: hidden;
   }
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 481px) {
   html,
   body {
     width: 100%;
@@ -43,6 +43,7 @@
 }
 
 body {
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 

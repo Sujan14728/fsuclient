@@ -8,15 +8,24 @@ const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
   const [openClass, setOpenClass] = useState(false);
   const [colorChange, setColorchange] = useState(false);
+
   const changeNavbarColor = () => {
+    console.log("scrolled");
     if (window.scrollY >= 80) {
       setColorchange(true);
     } else {
       setColorchange(false);
     }
   };
-  typeof window !== "undefined" &&
-    window.addEventListener("scroll", changeNavbarColor);
+  if (typeof window !== "undefined") {
+    window.addEventListener(
+      "scroll",
+      function () {
+        changeNavbarColor();
+      },
+      false
+    );
+  }
 
   return (
     <div
@@ -29,7 +38,6 @@ const Navbar = () => {
       </AnimatePresence>
       <div
         className={` flex justify-between px-5 items-center lg:flex-row 
-        
         `}
       >
         <Link
