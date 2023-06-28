@@ -44,7 +44,7 @@ const First = () => {
             quia voluptatem.
           </p>
           <Link
-            href="/"
+            href="#about"
             className="bg-background-color opacity-80 hover:opacity-100 text-white px-10 py-2 rounded-lg text-center w-max font-semibold text-lg"
           >
             About Us
