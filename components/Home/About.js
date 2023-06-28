@@ -2,17 +2,17 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 
-const Fourth = () => {
+const About = () => {
   return (
     <section
       id="about"
       className="w-[100%] h-max bg-[#d3d2d236] text-white uppercase flex justify-center"
     >
-      <div className="w-[70%] flex justify-between mb-20">
+      <div className=" lg:w-[70%] flex lg:flex-row flex-col items-center lg:items-stretch justify-between mb-20 mt-20 relative ">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
-          className="w-[35%] flex flex-col justify-between mt-20 bg-background-color h-[40rem] rounded-lg "
+          className="w-[90%] lg:w-[35%] flex flex-col md:justify-between relative top-0 mb-4 lg:mb-0 bg-background-color rounded-lg "
         >
           <div className=" text-white p-4">
             <span className="font-bold text-xl text-[#e8eaec] mb-2 font-[Poppins] ">
@@ -45,9 +45,9 @@ const Fourth = () => {
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
-          className="w-[60%] justify-center h-max"
+          className="w-[90%] lg:w-[60%] justify-center relative right-0 top-0"
         >
-          <div className="bg-white text-black rounded-lg mt-20">
+          <div className="bg-white text-black rounded-lg">
             <div className="flex flex-col p-4 items-center gap-10 ">
               <motion.span
                 initial={{ opacity: 0, x: 100 }}
@@ -94,4 +94,4 @@ const Fourth = () => {
   );
 };
 
-export default Fourth;
+export default About;

@@ -21,7 +21,10 @@ const Notice = () => {
         {loading ? (
           <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
             {notice.map((item, i) => (
-              <div key={i} className="p-4 md:w-1/2 lg:w-1/3 sm:mb-0 mb-6">
+              <div
+                key={i}
+                className="p-4 w-[100%] md:w-1/2 lg:w-1/3 sm:mb-0 mb-6"
+              >
                 <Skeleton className="h-[10rem]" />
                 <Skeleton className="h-[1.5rem]" />
                 <Skeleton className="h-[1.5rem]" width={"80%"} />
@@ -42,14 +45,5 @@ const Notice = () => {
     </div>
   );
 };
-
-// export const getServerSideProps = async () => {
-//   const result = await fetch("http://localhost:8000/notice");
-//   const notice = await result.json();
-
-//   return {
-//     props: { notice },
-//   };
-// };
 
 export default Notice;
