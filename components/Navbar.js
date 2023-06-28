@@ -149,10 +149,10 @@ const Navbar = () => {
           </div>
           <Link href="/portal">
             <button
-              className={`inline-flex items-center bg-secondary-color text-fourth-color hover:text-secondary-color border-0 py-2 px-8 focus:outline-none transition ease-in-out delay-[5000]  rounded text-base mt-4 md:mt-0 ${
+              className={`inline-flex items-center font-semibold bg-secondary-color text-fourth-color hover:text-secondary-color border-0 py-2 px-8 focus:outline-none duration-300 rounded text-base mt-4 md:mt-0 ${
                 colorChange
                   ? "hover:bg-white hover:text-secondary-color"
-                  : "hover:bg-background-color hover:text-white "
+                  : "hover:bg-background-color hover:text-white"
               }
       `}
             >
@@ -162,7 +162,7 @@ const Navbar = () => {
                 stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="2"
+                strokeWidth="3"
                 className="w-4 h-4 ml-1"
                 viewBox="0 0 24 24"
               >
