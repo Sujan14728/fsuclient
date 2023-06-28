@@ -1,48 +1,41 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import Register from "./register";
+import Image from "next/image";
+import Login from "./Login";
 
-const Login = () => {
-  const [loginPage, setLoginPage] = useState(true);
-  const [registerPage, setRegister] = useState(false);
+const Signin = () => {
+  const [registerPage, setRegisterPage] = useState(true);
+
+  const handleClick = () => {
+    setRegisterPage(!registerPage);
+  };
   return (
-    <div>
-      {/* Login */}
-      {loginPage && (
-        <div className="flex justify-center">
-          <div className="">
-            <motion.img
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              alt="portal"
-              src="/portal.jpg"
-              width={100}
-              height={100}
-              className="absolute top-0 left-0 w-[100vw] h-[100vh] z-10 object-cover"
-            />
-          </div>
-          {/* <div className=" mx-auto z-20 ">
+    <>
+      <div>
         <Image
-          src="/5325960.jpg"
-          height={30}
-          width={800}
-          alt="Portal"
-          className=" my-10"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          alt="portal"
+          src="/portal.jpg"
+          width={100}
+          height={100}
+          className="absolute top-0 left-0 w-[100vw] h-[100vh] z-10 object-cover"
+          unoptimized
+          priority
         />
-      </div> */}
+      </div>
+      <motion.div className="flex justify-center">
+        {registerPage ? (
           <motion.div
             initial={{ scale: 0, y: 300 }}
             animate={{
               scale: 1,
-              // rotate: 360,
-              // borderRadius: ["2%", "50%", "2%"],
               y: 0,
               transition: { delay: 0.25, duration: 0.75 },
             }}
-            className="flex flex-col text-white border-2  md:h-[38rem] md:w-[38rem] justify-center items-center shadow-lg rounded-lg z-20 
-        bg-gradient-radial  from-[#1c327a,#1c327af8] to-[#12dee657]"
+            className="flex flex-col text-white border-2 border-[#19f0ff]  md:min-h-[38rem] md:w-[38rem] justify-center items-center shadow-lg rounded-lg z-20 
+bg-gradient-radial  from-[#1c327a,#1c327af8] to-[#12dee657]"
           >
             <motion.div
               initial={{ y: -400, opacity: 0 }}
@@ -118,6 +111,31 @@ const Login = () => {
                   className="outline-none w-[20rem] p-2 ml-5 rounded-lg bg-[#13d3fa38] shadow-xl text-white placeholder:text-[#ffffff7a] "
                 />
               </div>
+              <div className="flex flex-row items-center justify-center">
+                <label htmlFor="password" className="text-white">
+                  <svg
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="23"
+                    height="23"
+                  >
+                    <path
+                      d="M12.5 8.5v-1a1 1 0 00-1-1h-10a1 1 0 00-1 1v6a1 1 0 001 1h10a1 1 0 001-1v-1m0-4h-4a2 2 0 100 4h4m0-4a2 2 0 110 4m-9-6v-3a3 3 0 016 0v3m2.5 4h1m-3 0h1m-3 0h1"
+                      stroke="currentColor"
+                    ></path>
+                  </svg>
+                </label>
+                <motion.input
+                  initial={{ scale: 1 }}
+                  whileFocus={{ scale: 1.05 }}
+                  type="cpassword"
+                  placeholder="Confirm Password"
+                  id="cpassword"
+                  name="cpassword"
+                  className="outline-none w-[20rem] p-2 ml-5 rounded-lg bg-[#13d3fa38] shadow-xl text-white placeholder:text-[#ffffff7a] "
+                />
+              </div>
               <Link href="/portal">
                 <motion.div
                   whileHover={{ scale: 1.1 }}
@@ -128,30 +146,27 @@ const Login = () => {
                   }}
                   className="rounded-lg w-[10rem] flex justify-center py-2 mx-auto shadow-lg bg-[#11f7f7] text-[#152425]  hover:text-[#ffffff] hover:shadow-2xl hover:shadow-[#1ffaef8f]  "
                 >
-                  Login
+                  Sign In
                 </motion.div>
               </Link>
 
-              <div className="w-full flex justify-center">
-                Don&apos;t have an account?{" "}
-                <Link
-                  href="/register"
-                  className="duration-300 text-[#47d1fc] hover:text-[#3dfded] ml-2"
+              <div className="w-full flex justify-center mb-2">
+                Already have an account?{" "}
+                <button
+                  onClick={handleClick}
+                  className="cursor-pointer duration-300 text-[#47d1fc] hover:text-[#3dfded] ml-2"
                 >
-                  Sign up
-                </Link>
+                  Login
+                </button>
               </div>
             </form>
           </motion.div>
-        </div>
-      )}
-      {registerPage && (
-        <div className="border-2">
-          <Register />
-        </div>
-      )}
-    </div>
+        ) : (
+          <Login />
+        )}
+      </motion.div>
+    </>
   );
 };
 
-export default Login;
+export default Signin;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Login from "./login";
 import Form from "@/components/Portal/Form";
+import Login from "@/components/Portal/Login";
 
 const Portal = () => {
   const [loggedin, setLoggedin] = useState(false);

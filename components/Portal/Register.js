@@ -1,8 +1,11 @@
-import React from "react"
-import Image from "next/image"
-import Link from "next/link"
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
-const Register = () => {
+import React from "react";
+
+const register = () => {
   return (
     <div className="flex flex-row gap-0">
       <div className="mx-auto">
@@ -27,10 +30,12 @@ const Register = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 width="23"
-                height="23">
+                height="23"
+              >
                 <path
                   d="M.5 4.5l7 4 7-4m-13-3h12a1 1 0 011 1v10a1 1 0 01-1 1h-12a1 1 0 01-1-1v-10a1 1 0 011-1z"
-                  stroke="currentColor"></path>
+                  stroke="currentColor"
+                ></path>
               </svg>
             </label>
             <input
@@ -48,10 +53,12 @@ const Register = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 width="23"
-                height="23">
+                height="23"
+              >
                 <path
                   d="M12.5 8.5v-1a1 1 0 00-1-1h-10a1 1 0 00-1 1v6a1 1 0 001 1h10a1 1 0 001-1v-1m0-4h-4a2 2 0 100 4h4m0-4a2 2 0 110 4m-9-6v-3a3 3 0 016 0v3m2.5 4h1m-3 0h1m-3 0h1"
-                  stroke="currentColor"></path>
+                  stroke="currentColor"
+                ></path>
               </svg>
             </label>
             <input
@@ -69,10 +76,12 @@ const Register = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 width="23"
-                height="23">
+                height="23"
+              >
                 <path
                   d="M12.5 8.5v-1a1 1 0 00-1-1h-10a1 1 0 00-1 1v6a1 1 0 001 1h10a1 1 0 001-1v-1m0-4h-4a2 2 0 100 4h4m0-4a2 2 0 110 4m-9-6v-3a3 3 0 016 0v3m2.5 4h1m-3 0h1m-3 0h1"
-                  stroke="currentColor"></path>
+                  stroke="currentColor"
+                ></path>
               </svg>
             </label>
             <input
@@ -85,8 +94,9 @@ const Register = () => {
           </div>
           <Link
             href="/portal"
-            className="border-2 border-black rounded px-9 py-2 mx-auto hover:scale-90">
-            Register 
+            className="border-2 border-black rounded px-9 py-2 mx-auto hover:scale-90"
+          >
+            Register
           </Link>
           <p>
             Already have an account?
@@ -97,7 +107,7 @@ const Register = () => {
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Register
+export default register;
