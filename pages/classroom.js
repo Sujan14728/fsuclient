@@ -1,7 +1,7 @@
-import React from "react";
+import React from "react"
 
 const Classroom = () => {
-  return <div className="container mx-auto p-5 ">Classroom</div>;
-};
+  return <div className="container mx-auto p-5 ">Classroom</div>
+}
 
-export default Classroom;
+export default Classroom

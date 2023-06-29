@@ -1,27 +1,27 @@
-import React, { useEffect, useState } from "react";
-import { notice } from "@/api/notice";
-import Image from "next/image";
-import Link from "next/link";
-import Skeleton from "react-loading-skeleton";
+import React, { useEffect, useState } from "react"
+import { notice } from "@/api/notice"
+import Image from "next/image"
+import Link from "next/link"
+import Skeleton from "react-loading-skeleton"
 
 const RecentNotice = () => {
-  const [recentNews, setRecentNews] = useState([{}]);
-  const [loading, setLoading] = useState(false);
-  const newsCount = 5;
+  const [recentNews, setRecentNews] = useState([{}])
+  const [loading, setLoading] = useState(false)
+  const newsCount = 5
 
   const getRecentNews = () => {
-    const updatedRecentNews = [];
+    const updatedRecentNews = []
     for (let i = 4; i >= 0; i--) {
-      updatedRecentNews.push(notice[i]);
+      updatedRecentNews.push(notice[i])
     }
-    setRecentNews(updatedRecentNews);
-  };
+    setRecentNews(updatedRecentNews)
+  }
 
   useEffect(() => {
-    setLoading(true);
-    getRecentNews();
-    setLoading(false);
-  }, []);
+    setLoading(true)
+    getRecentNews()
+    setLoading(false)
+  }, [])
 
   return (
     <div className="shadow-lg shadow-[#07040334] rounded-lg p-4">
@@ -48,7 +48,7 @@ const RecentNotice = () => {
           </div>
         ))}
     </div>
-  );
-};
+  )
+}
 
-export default RecentNotice;
+export default RecentNotice

@@ -1,52 +1,52 @@
-import Image from "next/image";
-import React from "react";
-import { motion } from "framer-motion";
+import Image from "next/image"
+import React from "react"
+import { motion } from "framer-motion"
 
 const About = () => {
   return (
     <section
       id="about"
-      className="w-[100%] h-max bg-[#d3d2d236] text-white uppercase flex justify-center"
-    >
+      className="w-[100%] h-max bg-[#d3d2d236] text-white flex justify-center">
       <div className=" lg:w-[70%] flex lg:flex-row flex-col items-center lg:items-stretch justify-between mb-20 mt-20 relative ">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
-          className="w-[90%] lg:w-[35%] flex flex-col md:justify-between relative top-0 mb-4 lg:mb-0 bg-background-color rounded-lg "
-        >
+          className="w-[90%] lg:w-[35%] flex flex-col md:justify-between relative text-center top-0 mb-4 lg:mb-0 bg-background-color rounded-lg ">
           <div className=" text-white p-4">
-            <span className="font-bold text-xl text-[#e8eaec] mb-2 font-[Poppins] ">
+            <span className="font-bold text-xl text-[#e8eaec] mb-2 uppercase font-[Poppins] ">
               Message from Campus Chief
             </span>
-            <p className="text-justify font-semibold text-lg mt-2 ">
-              FSU is a vibrant and inclusive political organization dedicated to
-              representing the voices and concerns of students at our campus. We
-              believe that students have the power to shape their own
+            <div className=" p-4 flex flex-col justify-center items-center ">
+              <div className="w-[60%] overflow-hidden rounded-md">
+                <Image
+                  alt="campus chief"
+                  src="/campuschief.jpg"
+                  width={800}
+                  height={100}
+                  className="scale-150"
+                />
+              </div>
+              <div className="flex flex-col font-bold uppercase mt-4 items-center">
+                <span>Kaji Ram Karki</span>
+                <span className="font-light uppercase">Campus Chief</span>
+                <span className="font-light uppercase">
+                  IOE Purwanchal Campus
+                </span>
+              </div>
+            </div>
+            <p className="font-light font-[Lobster] italic text-lg mt-2 mb-4 ">
+              "FSU is a vibrant and inclusive political organization dedicated
+              to representing the voices and concerns of students at our campus.
+              We believe that students have the power to shape their own
               educational journey and contribute to positive change within our
-              institution.
+              institution."
             </p>
-          </div>
-          <div className=" p-4 flex ">
-            <div className="w-[30%] ">
-              <Image
-                alt="campus chief"
-                src="/dummy.webp"
-                width={100}
-                height={100}
-                className=" rounded-md"
-              />
-            </div>
-            <div className="flex flex-col font-bold mt-4">
-              <span>"Campus Chief"</span>
-              <span>"Batch No."</span>
-            </div>
           </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
-          className="w-[90%] lg:w-[60%] justify-center relative right-0 top-0"
-        >
+          className="w-[90%] lg:w-[60%] justify-center relative right-0 top-0">
           <div className="bg-white text-black rounded-lg">
             <div className="flex flex-col p-4 items-center gap-10 ">
               <motion.span
@@ -56,8 +56,7 @@ const About = () => {
                   x: 0,
                   transition: { duration: 0.5 },
                 }}
-                className="font-bold text-3xl font-[Poppins]"
-              >
+                className="font-bold text-3xl font-[Poppins]">
                 Welcome to the FSU Community!
               </motion.span>
               <motion.p
@@ -67,8 +66,7 @@ const About = () => {
                   x: 0,
                   transition: { delay: 0.25, duration: 0.5 },
                 }}
-                className="text-lg font-semibold text-justify "
-              >
+                className="text-lg font-semibold text-justify mb-3 ">
                 We are a dynamic and progressive political organization
                 dedicated to representing and advocating for the rights and
                 interests of students in Nepal. Founded with the vision of
@@ -91,7 +89,7 @@ const About = () => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default About;
+export default About
