@@ -1,11 +1,11 @@
 import DonorForm from "@/components/Donor/DonorForm";
 import Table from "@/components/Donor/Table";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const BloodGroup = () => {
   return (
-    <div className="container mx-auto p-5">
-      <div className="flex w-[100%] flex-col lg:flex-row lg:justify-between">
+    <div className=" w-[100%] flex ">
+      <div className="flex w-full mt-10 flex-col items-center">
         <Table />
         <DonorForm />
       </div>

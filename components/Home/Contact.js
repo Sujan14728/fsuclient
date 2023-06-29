@@ -1,27 +1,28 @@
-import Image from "next/image"
-import React, { useState } from "react"
-import { motion } from "framer-motion"
+import Image from "next/image";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-  })
+  });
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log(formData)
-  }
+    e.preventDefault();
+    console.log(formData);
+  };
 
   return (
     <>
-      <motion.div className="mt-10 flex flex-row justify-center lg:justify-around">
-        <motion.form className="flex flex-col w-[80%] lg:w-[40%]">
+      <motion.div className="mt-10 flex flex-row justify-center lg:justify-around w-[80%]">
+        <motion.form className="flex flex-col w-[80%] lg:w-[40%] ">
           <motion.h3
             initial={{ y: -100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5 } }}
-            className="text-background-color text-center text-3xl mt-2 mb-8 font-bold uppercase flex flex-col font-[Poppins] items-center justify-start gap-1">
+            className="text-background-color text-center text-3xl mt-2 mb-8 font-bold uppercase flex flex-col font-[Poppins] items-center justify-start gap-1"
+          >
             {/* <svg
               viewBox="0 0 15 15"
               fill="none"
@@ -35,7 +36,9 @@ const Contact = () => {
               ></path>
             </svg> */}
             Get in touch
-            <p className="font-light text-base normal-case">We'd love to hear from you!</p>
+            <p className="font-light text-base normal-case">
+              We'd love to hear from you!
+            </p>
           </motion.h3>
           <motion.div
             initial={{ x: -100, opacity: 0 }}
@@ -44,7 +47,8 @@ const Contact = () => {
               opacity: 1,
               transition: { duration: 0.5, delay: 0.15 },
             }}
-            className="w-full flex flex-col">
+            className="w-full flex flex-col"
+          >
             <label htmlFor="name" className="text-xl mb-2">
               Name
             </label>
@@ -53,7 +57,7 @@ const Contact = () => {
                 setFormData({
                   ...formData,
                   name: e.target.value,
-                })
+                });
               }}
               autoComplete="off"
               name="name"
@@ -69,7 +73,8 @@ const Contact = () => {
               opacity: 1,
               transition: { duration: 0.5, delay: 0.3 },
             }}
-            className="w-full flex flex-col">
+            className="w-full flex flex-col"
+          >
             <label htmlFor="email" className="text-xl mb-2">
               Email
             </label>
@@ -78,7 +83,7 @@ const Contact = () => {
                 setFormData({
                   ...formData,
                   email: e.target.value,
-                })
+                });
               }}
               autoComplete="off"
               name="email"
@@ -94,7 +99,8 @@ const Contact = () => {
               opacity: 1,
               transition: { duration: 0.5, delay: 0.45 },
             }}
-            className="w-full flex flex-col">
+            className="w-full flex flex-col"
+          >
             <label htmlFor="message" className="text-xl mb-2">
               Message
             </label>
@@ -103,7 +109,7 @@ const Contact = () => {
                 setFormData({
                   ...formData,
                   message: e.target.value,
-                })
+                });
               }}
               id="message"
               name="message"
@@ -121,14 +127,16 @@ const Contact = () => {
               stiffness: 400,
               damping: 6,
             }}
-            className="bg-[#425cee] text-[#fffffffb] shadow-lg hover:text-white hover:bg-background-color text-xl rounded px-9 py-2 w-max mx-auto">
+            className="bg-[#425cee] text-[#fffffffb] shadow-lg hover:text-white hover:bg-background-color text-xl rounded px-9 py-2 w-max mx-auto"
+          >
             Submit
           </motion.button>
         </motion.form>
         <motion.div
           initial={{ x: 100 }}
           whileInView={{ x: 0, transition: { duration: 1 } }}
-          className="text-white hidden lg:flex">
+          className="text-white hidden lg:flex"
+        >
           <Image
             src="/undraw_contact_us_re_4qqt.svg"
             height={400}
@@ -138,7 +146,7 @@ const Contact = () => {
         </motion.div>
       </motion.div>
     </>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

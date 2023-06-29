@@ -1,4 +1,10 @@
 export const committee = [
+  // {
+  //   id: 0,
+  //   name: "Nabin Shrestha",
+  //   title: "President",
+  //   src: "/members/nabinstha.jpg",
+  // },
   {
     id: 1,
     name: "Saugat Bhattarai",
@@ -109,4 +115,4 @@ export const committee = [
     title: "Member",
     src: "/members/karanmagar.jpg",
   },
-]
+];

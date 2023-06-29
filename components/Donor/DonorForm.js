@@ -29,7 +29,7 @@ const DonorForm = () => {
   };
 
   return (
-    <div className="h-max w-[100%] lg:w-[48%] shadow-lg rounded-lg mt-14">
+    <div className="h-max w-[100%] lg:w-[48%] shadow-lg rounded-lg mt-14 mb-10">
       <form>
         <div className="flex justify-center ">
           <span className="font-bold text-2xl text-background-color ">
