@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Second = () => {
   return (
     <div
-      className={`w-[100%] justify-center items-center flex flex-col-reverse xl:flex-row  relative bg-background-color text-white  `}
+      className={`w-[80%] justify-center items-center flex flex-col-reverse xl:flex-row relative text-white`}
     >
       <motion.div
         initial={{ x: -100, opacity: 0 }}

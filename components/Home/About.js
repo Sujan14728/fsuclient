@@ -1,17 +1,19 @@
-import Image from "next/image"
-import React from "react"
-import { motion } from "framer-motion"
+import Image from "next/image";
+import React from "react";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <section
       id="about"
-      className="w-[100%] h-max bg-[#d3d2d236] text-white flex justify-center">
-      <div className=" lg:w-[70%] flex lg:flex-row flex-col items-center lg:items-stretch justify-between mb-20 mt-20 relative ">
+      className="w-[100%] h-max bg-[#d3d2d236] text-white flex justify-center min-h-[100vh]"
+    >
+      <div className=" lg:w-[80%]  flex lg:flex-row flex-col items-center lg:items-stretch justify-between mb-20 mt-20 relative ">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
-          className="w-[90%] lg:w-[35%] flex flex-col md:justify-between relative text-center top-0 mb-4 lg:mb-0 bg-background-color rounded-lg ">
+          className="w-[90%] lg:w-[35%] h-max flex flex-col md:justify-between relative text-center top-0 mb-4 lg:mb-0 bg-background-color rounded-lg "
+        >
           <div className=" text-white p-4">
             <span className="font-bold text-xl text-[#e8eaec] mb-2 uppercase font-[Poppins] ">
               Message from Campus Chief
@@ -46,7 +48,8 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
-          className="w-[90%] lg:w-[60%] justify-center relative right-0 top-0">
+          className="w-[90%] lg:w-[60%] justify-center relative right-0 top-0"
+        >
           <div className="bg-white text-black rounded-lg">
             <div className="flex flex-col p-4 items-center gap-10 ">
               <motion.span
@@ -56,7 +59,8 @@ const About = () => {
                   x: 0,
                   transition: { duration: 0.5 },
                 }}
-                className="font-bold text-3xl font-[Poppins]">
+                className="font-bold text-3xl font-[Poppins]"
+              >
                 Welcome to the FSU Community!
               </motion.span>
               <motion.p
@@ -66,7 +70,8 @@ const About = () => {
                   x: 0,
                   transition: { delay: 0.25, duration: 0.5 },
                 }}
-                className="text-lg font-semibold text-justify mb-3 ">
+                className="text-lg font-semibold text-justify mb-3 "
+              >
                 We are a dynamic and progressive political organization
                 dedicated to representing and advocating for the rights and
                 interests of students in Nepal. Founded with the vision of
@@ -89,7 +94,7 @@ const About = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;
