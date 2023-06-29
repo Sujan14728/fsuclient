@@ -1,10 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Sidebar from "./Sidebar";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
+  const router = useRouter();
+  const path = router.pathname;
   const [openNav, setOpenNav] = useState(false);
   const [openClass, setOpenClass] = useState(false);
   const [colorChange, setColorchange] = useState(false);
@@ -26,11 +29,14 @@ const Navbar = () => {
       false
     );
   }
+  const handleNavChange = (e) => {
+    console.log(e.target.value);
+  };
 
   return (
     <div
-      className={`text-gray-600 body-font shadow duration-500 sticky top-0 z-10  w-[100vw] ${
-        colorChange ? "bg-background-color text-white" : "bg-white"
+      className={`text-gray-600 body-font duration-500 sticky top-0 z-10 px-2  w-[100vw] ${
+        colorChange ? "bg-background-color text-white" : "bg-[#ffffff]"
       }`}
     >
       <AnimatePresence>
@@ -78,7 +84,7 @@ const Navbar = () => {
           <div className=" flex items-center text-base justify-center ">
             <Link
               href="/"
-              className={`mr-5 hover:border-b-2 hover:pb-1 ${
+              className={`${path == "/" && "text-[#b8642d]"}  mr-8 text-lg ${
                 colorChange
                   ? "hover:border-white hover:text-white"
                   : "hover:border-background-color"
@@ -88,7 +94,10 @@ const Navbar = () => {
             </Link>
             <Link
               href="/notice"
-              className={`mr-5 hover:border-b-2 hover:pb-1 ${
+              value="/notice"
+              className={`${
+                path == "/notice" && "text-[#b8642d]"
+              } mr-8 text-lg ${
                 colorChange
                   ? "hover:border-white hover:text-white"
                   : "hover:border-background-color"
@@ -98,7 +107,10 @@ const Navbar = () => {
             </Link>
             <Link
               href="/project"
-              className={`mr-5 hover:border-b-2 hover:pb-1 ${
+              value="/project"
+              className={`${
+                path == "/project" && "text-[#b8642d]"
+              } mr-8 text-lg ${
                 colorChange
                   ? "hover:border-white hover:text-white"
                   : "hover:border-background-color"
@@ -108,7 +120,10 @@ const Navbar = () => {
             </Link>
             <Link
               href="/bloodgroup"
-              className={`mr-5 hover:border-b-2 hover:pb-1 ${
+              value="/bloodgroup"
+              className={`${
+                path == "/bloodgroup" && "text-[#b8642d]"
+              } mr-8 text-lg ${
                 colorChange
                   ? "hover:border-white hover:text-white"
                   : "hover:border-background-color"
@@ -118,7 +133,10 @@ const Navbar = () => {
             </Link>
             <Link
               href="/classroom"
-              className={`mr-5 hover:border-b-2 hover:pb-1 ${
+              value="/classroom"
+              className={`${
+                path == "/classroom" && "text-[#b8642d]"
+              } mr-8 text-lg ${
                 colorChange
                   ? "hover:border-white hover:text-white"
                   : "hover:border-background-color"
@@ -149,9 +167,9 @@ const Navbar = () => {
           </div>
           <Link href="/portal">
             <button
-              className={`inline-flex items-center font-semibold bg-secondary-color text-fourth-color hover:text-secondary-color border-0 py-2 px-8 focus:outline-none duration-300 rounded text-base mt-4 md:mt-0 ${
+              className={`inline-flex items-center font-semibold bg-[#ec6a36cc] hover:bg-[#d6d6d6] text-fourth-color hover:text-[#EC6936] border-0 py-2 px-8 focus:outline-none duration-300 rounded text-base mt-4 md:mt-0 ${
                 colorChange
-                  ? "hover:bg-white hover:text-secondary-color"
+                  ? "hover:bg-black hover:text-secondary-color "
                   : "hover:bg-background-color hover:text-white"
               }
       `}

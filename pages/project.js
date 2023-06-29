@@ -47,8 +47,8 @@ const Project = () => {
   }, [selectedOption]);
 
   return (
-    <div className="container mx-auto p-5">
-      <div className="flex w-[100%] justify-center ">
+    <div className=" w-[100%] flex flex-col items-center mb-10 ">
+      <div className="flex w-[80%] justify-center mt-10 ">
         <div className="" id="filter">
           <button
             onClick={(e) => {
@@ -63,37 +63,46 @@ const Project = () => {
             onClick={(e) => {
               setSelectedOption(e.target.value);
             }}
-            value="Website"
+            value="Agriculture"
             className="p-2 hover:bg-[#22168e4f] rounded-lg mr-1 "
           >
-            Website
+            Agriculture
           </button>
           <button
             onClick={(e) => {
               setSelectedOption(e.target.value);
             }}
-            value="UI/UX"
+            value="Architecture"
             className="p-2 hover:bg-[#22168e4f] rounded-lg mr-1 "
           >
-            UI/UX
+            Architecture
           </button>
           <button
             onClick={(e) => {
               setSelectedOption(e.target.value);
             }}
-            value="AI"
+            value="Civil"
             className="p-2 hover:bg-[#22168e4f] rounded-lg mr-1 "
           >
-            AI
+            Civil
           </button>
           <button
             onClick={(e) => {
               setSelectedOption(e.target.value);
             }}
-            value="Android App"
+            value="Computer"
             className="p-2 hover:bg-[#22168e4f] rounded-lg mr-1 "
           >
-            Android App
+            Computer
+          </button>
+          <button
+            onClick={(e) => {
+              setSelectedOption(e.target.value);
+            }}
+            value="Electrical"
+            className="p-2 hover:bg-[#22168e4f] rounded-lg mr-1 "
+          >
+            Electrical
           </button>
           <button
             onClick={(e) => {
@@ -108,15 +117,15 @@ const Project = () => {
             onClick={(e) => {
               setSelectedOption(e.target.value);
             }}
-            value="Robotics"
+            value="Mechanical"
             className="p-2 hover:bg-[#22168e4f] rounded-lg mr-1 "
           >
-            Robotics
+            Mechanical
           </button>
         </div>
       </div>
       <AnimatePresence>
-        <motion.div className="flex flex-wrap">
+        <motion.div className="flex flex-wrap w-[80%]">
           {filteredProject &&
             filteredProject.map((item, i) => (
               <SingleProject key={i} item={item} index={i} />

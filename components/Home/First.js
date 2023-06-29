@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const First = () => {
   return (
     <motion.div
-      className={`font-[Helvetica] w-[100%] h-[90vh] flex justify-center mt-10`}
+      className={`font-[Helvetica] w-[100%] min-h-[100vh] flex justify-center bg-[#fcfbfb] `}
     >
       <div className="flex flex-col xl:flex-row items-center w-[70%] ">
         <motion.div
