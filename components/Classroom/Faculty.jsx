@@ -21,7 +21,7 @@ const Faculty = ({ item }) => {
           height={160}
           alt="content"
           className="object-contain object-center"
-          src="/fsu.png"
+          src={item.src}
           priority
         />
       </div>

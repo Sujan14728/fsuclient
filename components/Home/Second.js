@@ -14,7 +14,7 @@ const Second = () => {
         whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
         className="xl:w-[55%] w-[90%] flex flex-col items-center mt-4"
       >
-        <h2 className="font-extrabold text-2xl md:text-3xl mb-6">
+        <h2 className="font-extrabold font-[Montserrat] text-2xl md:text-3xl mb-8">
           What our president has to say:
         </h2>
         <p className="text-xl md:text-3xl text-[#f7f4f4] font-[Lobster] italic mb-8">
@@ -31,8 +31,8 @@ const Second = () => {
           brighter future. Thank you.&quot;
         </p>
         <div className="flex flex-col items-center text-base md:text-xl mb-10">
-          <p className=" font-semibold">- Nabin Shrestha</p>
-          <p className=" text-sm md:text-xl text-[#b3b0b0] font-semibold">
+          <p className=" font-semibold font-[Poppins]">- Nabin Shrestha</p>
+          <p className=" text-sm md:text-xl text-[#b3b0b0] font-[Poppins] font-semibold">
             President (FSU Purwanchal Campus, Dharan)
           </p>
         </div>

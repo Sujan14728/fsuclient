@@ -1,7 +1,7 @@
-import React from "react";
-import Image from "next/image";
-import { committee } from "@/api/committee";
-import { AnimatePresence, motion } from "framer-motion";
+import React from "react"
+import Image from "next/image"
+import { committee } from "@/api/committee"
+import { AnimatePresence, motion } from "framer-motion"
 
 const Third = () => {
   const containerVariants = {
@@ -14,15 +14,15 @@ const Third = () => {
         staggerChildren: 0.25,
       },
     },
-  };
+  }
   const itemVariants = {
     hidden: { opacity: 0, x: -200 },
     show: { opacity: 1, x: 0 },
-  };
+  }
   const variants = {
     hidden: { opacity: 0, y: -100 },
     show: { opacity: 1, y: 0 },
-  };
+  }
   return (
     <div className="h-[100%] w-[100%] my-10 flex flex-col items-center relative ">
       <h3 className="text-center text-3xl ">Meet the team</h3>
@@ -73,12 +73,10 @@ const Third = () => {
         transition={{ duration: 120, repeat: "infinite" }}
         viewBox="0 0 700 700"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute -left-[10rem] -top-[10rem]  "
-      >
+        className="absolute -left-[10rem] -top-[10rem]  ">
         <path
           d="M86,66Q76,82,59.5,81Q43,80,28,74Q13,68,13,50Q13,32,26.5,19Q40,6,58,11.5Q76,17,86,33.5Q96,50,86,66Z"
-          fill="#42444b38"
-        >
+          fill="#42444b38">
           <animate
             attributeName="d"
             dur="10000ms"
@@ -100,8 +98,7 @@ const Third = () => {
               M76,65Q67,80,47.5,83.5Q28,87,18,68.5Q8,50,19,32.5Q30,15,51.5,12.5Q73,10,79,30Q85,50,76,65Z;
               M77,68.5Q71,87,51.5,84.5Q32,82,18.5,66Q5,50,19,35Q33,20,49.5,21.5Q66,23,74.5,36.5Q83,50,77,68.5Z;
               M83,71Q74,92,52,88.5Q30,85,24.5,67.5Q19,50,25.5,34.5Q32,19,52,15.5Q72,12,82,31Q92,50,83,71Z;
-              "
-          ></animate>
+              "></animate>
         </path>
       </motion.svg>
       <motion.div
@@ -112,8 +109,7 @@ const Third = () => {
           x: 0,
           opacity: 1,
           transition: { duration: 1 },
-        }}
-      >
+        }}>
         <div className="w-[100%] flex justify-center ">
           <Image
             src="/members/nabinstha.jpg"
@@ -131,8 +127,7 @@ const Third = () => {
             y: 0,
             transition: { duration: 1, delay: 1 },
           }}
-          className="w-[40%] flex flex-col items-center absolute bottom-0 bg-white rounded-xl shadow-xl "
-        >
+          className="w-[40%] flex flex-col items-center absolute bottom-0 bg-white rounded-xl shadow-xl font-[Poppins]">
           <h3 className="text-xl font-bold text-center ">Nabin Shrestha</h3>
           <p>President</p>
         </motion.div>
@@ -143,14 +138,12 @@ const Third = () => {
           viewport={{ once: true }}
           initial="hidden"
           whileInView="show"
-          className="grid grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 lg:gap-2"
-        >
+          className="grid grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 lg:gap-2">
           {committee?.map((item) => (
             <motion.div
               key={item.id}
-              className="rounded p-4 text-center flex justify-center relative mx-6 md:mx-14"
-              variants={itemVariants}
-            >
+              className="rounded p-4 text-center flex justify-center relative mx-6 md:mx-14 font-[Poppins]"
+              variants={itemVariants}>
               <div className="w-[100%] flex justify-center">
                 <Image
                   src={item.src}
@@ -168,8 +161,7 @@ const Third = () => {
                   damping: 10,
                   stiffness: 300,
                 }}
-                className="min-w-[40%] max-w-full flex flex-col items-center absolute bottom-0 bg-white rounded-xl shadow-xl px-4 py-1"
-              >
+                className="min-w-[40%] max-w-full flex flex-col items-center absolute bottom-0 bg-white rounded-xl shadow-xl px-4 py-1">
                 <h3 className="text-[0.6rem] font-bold text-center lg:text-base">
                   {item.name}
                 </h3>
@@ -180,7 +172,7 @@ const Third = () => {
         </motion.div>
       </AnimatePresence>
     </div>
-  );
-};
+  )
+}
 
-export default Third;
+export default Third
