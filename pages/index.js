@@ -21,9 +21,9 @@ export default function Home() {
       <div className="mt-72 xl:mt-0 w-[100%] bg-background-color flex justify-center">
         <Second />
       </div>
-      <div className="w-full">
+      {/* <div className="w-full">
         <About />
-      </div>
+      </div> */}
       <div className="w-full min-h-[90vh] bg-[#9487872d] flex justify-center ">
         <Third />
       </div>
