@@ -25,13 +25,15 @@ const Project = () => {
     let btn = document.querySelectorAll("#filter")[0]
     btn = btn.children
     for (let i = 0; i < btn.length; i++) {
-      btn[i].classList.remove("bg-background-color")
-      btn[i].classList.add("hover:bg-[#22168e4f]")
-      btn[i].classList.remove("text-white")
+      btn[i].classList.add("hover:text-background-color")
+      btn[i].classList.remove("bg-white")
+      btn[i].classList.remove("text-background-color")
+      btn[i].classList.add("hover:bg-white")
       if (selectedOption === btn[i].value) {
-        btn[i].classList.add("bg-background-color")
-        btn[i].classList.remove("hover:bg-[#22168e4f]")
-        btn[i].classList.add("text-white")
+        btn[i].classList.add("bg-white")
+        btn[i].classList.remove("hover:text-background-color")
+        btn[i].classList.remove("hover:bg-white")
+        btn[i].classList.add("text-background-color")
       }
     }
   }
@@ -44,7 +46,9 @@ const Project = () => {
   return (
     <div className=" w-[100%] flex flex-col items-center mb-10 ">
       <div className="flex w-[80%] justify-center mt-10 ">
-        <div className="bg-background-color p-1 font-[Poppins] text-white rounded-lg" id="filter">
+        <div
+          className="bg-background-color p-1 font-[Poppins] text-white rounded-lg"
+          id="filter">
           <button
             onClick={(e) => {
               setSelectedOption(e.target.value)
