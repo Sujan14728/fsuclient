@@ -20,6 +20,7 @@ const Contact = () => {
         <motion.form className="flex flex-col w-[80%] lg:w-[40%] ">
           <motion.h3
             initial={{ y: -100, opacity: 0 }}
+            viewport={{ once: true }}
             whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5 } }}
             className="text-background-color text-center text-3xl mt-2 mb-8 font-bold uppercase flex flex-col font-[Poppins] items-center justify-start gap-1"
           >
@@ -42,6 +43,7 @@ const Contact = () => {
           </motion.h3>
           <motion.div
             initial={{ x: -100, opacity: 0 }}
+            viewport={{ once: true }}
             whileInView={{
               x: 0,
               opacity: 1,
@@ -68,6 +70,7 @@ const Contact = () => {
           </motion.div>
           <motion.div
             initial={{ x: -100, opacity: 0 }}
+            viewport={{ once: true }}
             whileInView={{
               x: 0,
               opacity: 1,
@@ -94,6 +97,7 @@ const Contact = () => {
           </motion.div>
           <motion.div
             initial={{ x: -100, opacity: 0 }}
+            viewport={{ once: true }}
             whileInView={{
               x: 0,
               opacity: 1,
@@ -120,6 +124,7 @@ const Contact = () => {
           </motion.div>
           <motion.button
             onClick={handleSubmit}
+            viewport={{ once: true }}
             whileInView={{ scale: 1.1 }}
             whileHover={{ scale: 1.2 }}
             transition={{
@@ -127,12 +132,14 @@ const Contact = () => {
               stiffness: 400,
               damping: 6,
             }}
-            className="bg-[#425cee] text-[#fffffffb] shadow-lg hover:text-white hover:bg-background-color text-xl rounded px-9 py-2 w-max mx-auto font-[Poppins]">
+            className="bg-[#425cee] text-[#fffffffb] shadow-lg hover:text-white hover:bg-background-color text-xl rounded px-9 py-2 w-max mx-auto font-[Poppins]"
+          >
             Submit
           </motion.button>
         </motion.form>
         <motion.div
           initial={{ x: 100 }}
+          viewport={{ once: true }}
           whileInView={{ x: 0, transition: { duration: 1 } }}
           className="text-white hidden lg:flex"
         >
