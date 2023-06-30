@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 const Table = () => {
   const [filteredData, setFilteredData] = useState();
   const [groupSelected, setGroupSelected] = useState("all");
-  const [blank, setBlank] = useState(false);
   const [selectedPage, setSelectedPage] = useState(1);
   const [paginatedBtn, setPaginatedBtn] = useState(1);
 
@@ -55,13 +54,13 @@ const Table = () => {
   }, [groupSelected, selectedPage]);
 
   return (
-    <div className="shadow-lg rounded-b-lg flex flex-col w-[100%] md:w-[100%] lg:w-[50%] items-center min-h-[50rem] h-max relative">
+    <div className="shadow-lg rounded-b-lg flex flex-col w-[100%] md:w-[100%] lg:w-[50%] items-center min-h-[50rem] h-max relative bg-[#fcfcfc]">
       <div className="bg-background-color rounded-t-lg text-white w-[100%] flex justify-center items-center h-[3rem] ">
         <span className="font-bold text-[1.5rem] font-[Montserrat]">
           Student's Blood Group
         </span>
       </div>
-      <div className="w-full min-h-[45rem] ">
+      <div className="w-full min-h-[45rem]">
         <div className="flex mt-4 w-[100%] justify-between">
           <div className="flex items-center ml-2">
             <label htmlFor="group" className="font-semibold ">

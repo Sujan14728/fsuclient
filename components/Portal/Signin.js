@@ -34,7 +34,7 @@ const Signin = () => {
               y: 0,
               transition: { delay: 0.25, duration: 0.75 },
             }}
-            className="flex flex-col text-white border-2 border-[#19f0ff]  md:min-h-[38rem] md:w-[38rem] justify-center items-center shadow-lg rounded-lg z-20 
+            className="flex flex-col text-white   md:min-h-[38rem] md:w-[38rem] justify-center items-center shadow-lg rounded-lg z-20 
 bg-gradient-radial  from-[#1c327a,#1c327af8] to-[#12dee657]"
           >
             <motion.div
@@ -137,20 +137,20 @@ bg-gradient-radial  from-[#1c327a,#1c327af8] to-[#12dee657]"
                 />
               </div>
               <div className="flex flex-row items-center justify-center gap-5">
-              <Link href="/portal">
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 400,
-                    damping: 6,
-                  }}
-                  className="rounded-lg w-max flex justify-center py-2 px-12 mx-auto shadow-lg bg-[#11f7f7] text-[#152425]  hover:text-[#ffffff] hover:shadow-2xl hover:shadow-[#1ffaef8f]  font-[Poppins]"
-                >
-                  Sign In
-                </motion.div>
-              </Link>
-              <Link href="/">
+                <Link href="/portal">
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 6,
+                    }}
+                    className="rounded-lg w-max flex justify-center py-2 px-12 mx-auto shadow-lg bg-[#11f7f7] text-[#152425]  hover:text-[#ffffff] hover:shadow-2xl hover:shadow-[#1ffaef8f]  font-[Poppins]"
+                  >
+                    Sign In
+                  </motion.div>
+                </Link>
+                {/* <Link href="/">
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   transition={{
@@ -162,7 +162,7 @@ bg-gradient-radial  from-[#1c327a,#1c327af8] to-[#12dee657]"
                 >
                   Go Back
                 </motion.div>
-              </Link>
+              </Link> */}
               </div>
 
               <div className="w-full flex justify-center mb-2 font-[Montserrat]">

@@ -18,6 +18,8 @@ module.exports = {
         "secondary-color": "var(--secondary-color)",
         "tertiary-color": "var(--tertiary-color)",
         "fourth-color": "var(--fourth-color)",
+        "fifth-color": "var(--fifth-color)",
+        "sixth-color": "var(--sixth-color)",
       },
     },
   },
