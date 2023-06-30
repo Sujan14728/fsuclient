@@ -71,7 +71,7 @@ const Table = () => {
               onChange={handleGroup}
               name="group"
               id="group"
-              className="ml-4 rounded-lg w-[6rem] cursor-pointer bg-background-color outline-none text-white p-1">
+              className="ml-4 rounded-lg w-[6rem] cursor-pointer text-background-color outline-none bg-white border-2 border-background-color p-1">
               <option value="all">All</option>
               <option value="A+">A+</option>
               <option value="A-">A-</option>
