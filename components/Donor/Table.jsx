@@ -96,10 +96,10 @@ const Table = () => {
         <table className="w-[100%] mt-4 " id="blood-group-info">
           <tbody className="text-[0.9rem]">
             <tr>
-              <th className=" p-2 w-[30%]">Name</th>
-              <th className=" p-2 w-[20%]">Blood Group</th>
-              <th className=" p-2 w-[30%]">Address</th>
-              <th className=" p-2 w-[20%]">Contact no.</th>
+              <th className="text-left text-[1rem] p-2 w-[30%]">Name</th>
+              <th className="text-left text-[1rem] p-2 w-[20%]">Blood Group</th>
+              <th className="text-left text-[1rem] p-2 w-[30%]">Address</th>
+              <th className="text-left text-[1rem] p-2 w-[20%]">Contact no.</th>
             </tr>
             <AnimatePresence>
               {filteredData &&
@@ -114,10 +114,34 @@ const Table = () => {
                     exit={{ x: "-10rem", opacity: 0 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <td className=" p-2">{item.name}</td>
-                    <td className=" p-2">{item.blood}</td>
-                    <td className=" p-2">{item.address}</td>
-                    <td className=" p-2">{item.contact}</td>
+                    <td
+                      className={`${
+                        i % 2 == 0 ? "bg-[#0f29804b]" : "bg-[#f5f3f3]"
+                      } p-2`}
+                    >
+                      {item.name}
+                    </td>
+                    <td
+                      className={`${
+                        i % 2 == 0 ? "bg-[#0f29804b]" : "bg-[#f5f3f3]"
+                      } p-2`}
+                    >
+                      {item.blood}
+                    </td>
+                    <td
+                      className={`${
+                        i % 2 == 0 ? "bg-[#0f29804b]" : "bg-[#f5f3f3]"
+                      } p-2`}
+                    >
+                      {item.address}
+                    </td>
+                    <td
+                      className={`${
+                        i % 2 == 0 ? "bg-[#0f29804b]" : "bg-[#f5f3f3]"
+                      } p-2`}
+                    >
+                      {item.contact}
+                    </td>
                   </motion.tr>
                 ))}
             </AnimatePresence>
