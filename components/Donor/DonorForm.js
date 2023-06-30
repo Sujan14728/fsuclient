@@ -1,38 +1,38 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react";
 
 const DonorForm = () => {
-  const [selectedGroup, setSelectedGroup] = useState("")
+  const [selectedGroup, setSelectedGroup] = useState("");
   const [formData, setFormData] = useState({
     requestedBy: "",
     patientName: "",
     patientAge: "",
     bloodGroup: "",
     quantity: "",
-  })
+  });
 
   const handleGroupChange = (e) => {
-    let allInput = document.getElementsByClassName("peer")
+    let allInput = document.getElementsByClassName("peer");
     for (let i = 0; i < allInput.length; i++) {
-      allInput[i].checked = false
+      allInput[i].checked = false;
     }
-    e.target.checked = true
-    setSelectedGroup(e.target.value)
+    e.target.checked = true;
+    setSelectedGroup(e.target.value);
     setFormData({
       ...formData,
       bloodGroup: e.target.value,
-    })
-  }
+    });
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log(formData)
-  }
+    e.preventDefault();
+    console.log(formData);
+  };
 
   return (
-    <div className="h-max w-[100%] lg:w-[48%] shadow-lg rounded-lg mt-14 mb-10">
+    <div className="h-max w-[100%] lg:w-[50%] shadow-lg rounded-lg mt-14 mb-10 bg-[#fcfcfc] ">
       <form>
         <div className="flex justify-center ">
-          <span className="font-bold text-2xl text-background-color font-[Montserrat]">
+          <span className="font-bold text-2xl text-background-color font-[Montserrat] mt-6 ">
             Request for Blood Donation
           </span>
         </div>
@@ -47,7 +47,7 @@ const DonorForm = () => {
               setFormData({
                 ...formData,
                 requestedBy: e.target.value,
-              })
+              });
             }}
             className="border-[1.5px] border-[#c3c0f1] rounded-lg outline-none h-[3rem] text-lg px-4 "
           />
@@ -63,7 +63,7 @@ const DonorForm = () => {
               setFormData({
                 ...formData,
                 patientName: e.target.value,
-              })
+              });
             }}
             className="border-[1.5px] border-[#c3c0f1] rounded-lg outline-none h-[3rem] text-lg px-4 "
           />
@@ -79,7 +79,7 @@ const DonorForm = () => {
               setFormData({
                 ...formData,
                 patientAge: e.target.value,
-              })
+              });
             }}
             className="border-[1.5px] border-[#c3c0f1] rounded-lg outline-none h-[3rem] text-lg px-4 "
           />
@@ -98,7 +98,8 @@ const DonorForm = () => {
               />
               <label
                 htmlFor="O-"
-                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color">
+                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color"
+              >
                 O-
               </label>
             </div>
@@ -113,7 +114,8 @@ const DonorForm = () => {
               />
               <label
                 htmlFor="O+"
-                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color">
+                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color"
+              >
                 O+
               </label>
             </div>
@@ -128,7 +130,8 @@ const DonorForm = () => {
               />
               <label
                 htmlFor="A-"
-                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color">
+                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color"
+              >
                 A-
               </label>
             </div>
@@ -143,7 +146,8 @@ const DonorForm = () => {
               />
               <label
                 htmlFor="A+"
-                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color">
+                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color"
+              >
                 A+
               </label>
             </div>
@@ -158,7 +162,8 @@ const DonorForm = () => {
               />
               <label
                 htmlFor="B-"
-                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color">
+                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color"
+              >
                 B-
               </label>
             </div>
@@ -173,7 +178,8 @@ const DonorForm = () => {
               />
               <label
                 htmlFor="B+"
-                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color">
+                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color"
+              >
                 B+
               </label>
             </div>
@@ -188,7 +194,8 @@ const DonorForm = () => {
               />
               <label
                 htmlFor="AB-"
-                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color">
+                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color"
+              >
                 AB-
               </label>
             </div>
@@ -203,7 +210,8 @@ const DonorForm = () => {
               />
               <label
                 htmlFor="AB+"
-                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color">
+                className="h-[2rem] w-[2rem] py-2 px-3 rounded-lg cursor-pointer border-[1.5px] border-[#c3c0f1] transition-all duration-100 peer-checked:font-bold peer-checked:text-background-color peer-checked:border-[2px] peer-checked:border-background-color"
+              >
                 AB+
               </label>
             </div>
@@ -221,7 +229,7 @@ const DonorForm = () => {
               setFormData({
                 ...formData,
                 quantity: e.target.value,
-              })
+              });
             }}
             className="border-[1.5px] border-[#c3c0f1] rounded-lg outline-none h-[3rem] text-lg px-4 "
           />
@@ -229,13 +237,14 @@ const DonorForm = () => {
         <div className="w-[100%] flex justify-center mb-4">
           <button
             onClick={handleSubmit}
-            className="py-4 px-8 hover:bg-[#253c80] bg-[#253c8080] transition-all duration-500 rounded-xl text-fourth-color font-[Poppins]">
+            className="py-4 px-8 hover:bg-[#253c80] bg-[#253c8080] transition-all duration-500 rounded-xl text-fourth-color font-[Poppins]"
+          >
             Request Now
           </button>
         </div>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default DonorForm
+export default DonorForm;

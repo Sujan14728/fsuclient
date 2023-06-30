@@ -20,7 +20,7 @@ const RoutineCard = ({ item }) => {
   return (
     <div
       layoutid={selectedId}
-      className={`w-[80%] h-[3rem] flex justify-between items-center shadow-2xl rounded-lg bg-gradient-to-r from-[#2d228d] to-[#5f68ec98] `}
+      className={`w-[80%] h-[3rem] flex justify-between items-center shadow-2xl rounded-lg bg-gradient-to-r from-[#48408d] to-[#108cf1dc] `}
     >
       <span className="px-4 text-white text-xl">
         Routine of {item.faculty} {item.year + "/" + item.semester}

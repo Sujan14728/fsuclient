@@ -29,19 +29,16 @@ const First = () => {
           initial={{ x: 100, y: -100 }}
           whileInView={{ x: 0, y: 0, transition: { duration: 1 } }}
         >
-          <h1 className="text-2xl md:text-4xl uppercase font-extrabold text-white bg-gradient-to-r from-background-color to-secondary-color rounded w-max px-5 py-3 font-[Montserrat] mb-3">
+          {/* bg-gradient-to-r from-[#48408d] to-[#108cf1dc] */}
+          <h1 className="text-2xl md:text-4xl uppercase font-extrabold text-white bg-fifth-color rounded w-max px-5 py-3 font-[Montserrat]">
             Free Student Union
           </h1>
-          <p className="uppercase px-2 text-base md:text-lg mb-5 font-[Poppins]">
+          {/* <p className="uppercase px-2 text-base md:text-xl text-[#777676] mb-5 mt-2 font-[Poppins]">
             ioe purwanchal campus
-          </p>
-          <p className="border-0 pl-2 mb-3 border-background-color font-[Montserrat]">
-            Lorem ipsum dolor sit amet. Ea dicta deleniti sit nobis beatae est
-            autem officia sed inventore sunt et magnam expedita? Est repellat
-            rerum non voluptas rerum ut omnis beatae? Aut deserunt nulla aut
-            rerum expedita aut internos architecto vel natus harum. Qui
-            accusamus veritatis et consequuntur rerum qui commodi voluptates qui
-            quia voluptatem.
+          </p> */}
+          <p className="border-0 mb-3 border-background-color font-[Montserrat] text-[2rem] font-bold text-[#5b50b8] ">
+            Empowering students. Advocating for change. Creating a better
+            future.
           </p>
           <Link
             href="#about"

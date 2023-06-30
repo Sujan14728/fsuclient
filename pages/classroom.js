@@ -4,10 +4,10 @@ import Teachers from "@/components/Class/Teachers";
 
 const Classroom = () => {
   return (
-    <div className="min-h-[100vh] w-[100vw] flex justify-center bg-[#ffffff]">
-      <div className="w-[80%] flex justify-between mt-10">
+    <div className="min-h-[100vh] w-[100vw] flex justify-center bg-[#faf6ef44]">
+      <div className="w-[80%] flex justify-center mt-10 ">
         <Routine />
-        <Teachers />
+        {/* <Teachers /> */}
       </div>
     </div>
   );

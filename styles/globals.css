@@ -11,6 +11,8 @@
   --secondary-color: #4597d9;
   --tertiary-color: #ed6935;
   --fourth-color: #fff6f4;
+  --fifth-color: #48408d;
+  --sixth-color: #108cf1dc;
 }
 
 @media (prefers-color-scheme: dark) {

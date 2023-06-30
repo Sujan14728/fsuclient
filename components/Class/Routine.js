@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 const Routine = () => {
   const [year, setYear] = useState("");
   const [faculty, setFaculty] = useState("all");
-  const [filteredRoutine, setFilteredRoutine] = useState();
+  const [filteredRoutine, setFilteredRoutine] = useState(null);
   const handleFilter = () => {
     let filter = routine.filter((item) => {
       if (
@@ -17,7 +17,6 @@ const Routine = () => {
         return null;
       }
     });
-    console.log(filter);
     setFilteredRoutine(filter);
   };
 
@@ -26,16 +25,16 @@ const Routine = () => {
   }, [year, faculty]);
 
   return (
-    <div className="w-[50%]">
-      <div className="h-[35rem] flex flex-col items-center shadow-lg rounded-xl ">
-        <h1 className="text-2xl font-bold text-[#616060] text-background-color ">
+    <div className="w-[80%] lg:w-[60%] bg-white h-max">
+      <div className="h-[40rem] flex flex-col items-center shadow-lg rounded-xl py-8 ">
+        <h1 className="text-2xl font-bold text-[#365e80dc] ">
           Search Your Routine
         </h1>
         <div className="w-[100%] flex justify-center gap-10 mt-4">
           <select
             name="year"
             id="year"
-            className="w-[8rem]"
+            className="w-[8rem] h-[2rem] rounded-lg px-2 text-white bg-[#314c96]"
             value={year}
             onChange={(e) => {
               setYear(e.target.value);
@@ -60,6 +59,7 @@ const Routine = () => {
             name="faculty"
             id="faculty"
             value={faculty}
+            className="w-[8rem] h-[2rem] rounded-lg px-2 text-white bg-[#314c96]"
             onChange={(e) => {
               setFaculty(e.target.value);
             }}
@@ -78,9 +78,7 @@ const Routine = () => {
         </div>
         <div className="mt-4 h-[30rem] w-[100%] flex flex-col gap-2 items-center">
           {filteredRoutine?.map((item, i) => (
-            <>
-              <RoutineCard item={item} key={i} />
-            </>
+            <RoutineCard item={item} key={i} />
           ))}
         </div>
       </div>
