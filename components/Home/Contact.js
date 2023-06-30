@@ -47,7 +47,7 @@ const Contact = () => {
               opacity: 1,
               transition: { duration: 0.5, delay: 0.15 },
             }}
-            className="w-full flex flex-col"
+            className="w-full flex flex-col font-[Poppins]"
           >
             <label htmlFor="name" className="text-xl mb-2">
               Name
@@ -73,7 +73,7 @@ const Contact = () => {
               opacity: 1,
               transition: { duration: 0.5, delay: 0.3 },
             }}
-            className="w-full flex flex-col"
+            className="w-full flex flex-col font-[Poppins]"
           >
             <label htmlFor="email" className="text-xl mb-2">
               Email
@@ -99,7 +99,7 @@ const Contact = () => {
               opacity: 1,
               transition: { duration: 0.5, delay: 0.45 },
             }}
-            className="w-full flex flex-col"
+            className="w-full flex flex-col font-[Poppins]"
           >
             <label htmlFor="message" className="text-xl mb-2">
               Message
@@ -127,8 +127,7 @@ const Contact = () => {
               stiffness: 400,
               damping: 6,
             }}
-            className="bg-[#425cee] text-[#fffffffb] shadow-lg hover:text-white hover:bg-background-color text-xl rounded px-9 py-2 w-max mx-auto"
-          >
+            className="bg-[#425cee] text-[#fffffffb] shadow-lg hover:text-white hover:bg-background-color text-xl rounded px-9 py-2 w-max mx-auto font-[Poppins]">
             Submit
           </motion.button>
         </motion.form>

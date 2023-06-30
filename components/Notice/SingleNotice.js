@@ -14,7 +14,7 @@ const SingleNotice = ({ item }) => {
 
   return (
     <div className="p-4 w-full h-full md:w-1/2 lg:w-1/3 sm:mb-0 mb-6">
-      <div className="h-[18rem] md:h-[10rem] flex justify-center items-center rounded-lg overflow-hidden bg-gradient-to-tr from-background-color to-secondary-color">
+      <div className="h-[18rem] md:h-[10rem] flex justify-center items-center rounded-lg overflow-hidden bg-gradient-to-tr from-background-color to-secondary-color font-[Montserrat]">
         <Image
           width={160}
           height={160}
@@ -26,7 +26,7 @@ const SingleNotice = ({ item }) => {
       </div>
       <Link
         href={`/notice/${item.id}`}
-        className="text-xl font-medium title-font text-gray-900 mt-2 cursor-pointer "
+        className="text-xl font-medium title-font text-gray-900 mt-2 cursor-pointer font-[Poppins]"
       >
         {item.title}
       </Link>

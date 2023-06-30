@@ -14,8 +14,8 @@ const Footer = () => {
     //     Sujan
     //   </Link>
     // </div>
-    <footer className="text-white body-font border-2 bg-background-color flex flex-col items-center">
-      <div className="  w-[80%] px-5 py-24 flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+    <footer className="text-white body-font font-[Poppins]">
+      <div className=" bg-background-color px-5 py-24 flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div className="md:w-[40%] lg:w-[20%] flex flex-col flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <Link
             href="/"
@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
           <div className="lg:w-1/3 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium text-white tracking-widest text-lg mb-3">
               NAVIGATION
             </h2>
             <nav className="list-none mb-10">
@@ -71,7 +71,7 @@ const Footer = () => {
             </nav>
           </div>
           <div className="lg:w-1/3 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium text-white tracking-widest text-lg mb-3">
               QUICK LINKS
             </h2>
             <nav className="list-none mb-10">
@@ -90,7 +90,7 @@ const Footer = () => {
             </nav>
           </div>
           <div className="lg:w-1/3 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium text-white tracking-widest text-lg mb-3">
               USEFUL LINKS
             </h2>
             <nav className="list-none mb-10">

@@ -70,8 +70,7 @@ const About = () => {
                   x: 0,
                   transition: { delay: 0.25, duration: 0.5 },
                 }}
-                className="text-lg font-semibold text-justify mb-3 "
-              >
+                className="text-lg font-medium font-[Montserrat] text-justify mb-3 ">
                 We are a dynamic and progressive political organization
                 dedicated to representing and advocating for the rights and
                 interests of students in Nepal. Founded with the vision of

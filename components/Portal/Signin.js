@@ -17,7 +17,7 @@ const Signin = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           alt="portal"
-          src="/portal.jpg"
+          src="/purwanchalcampus.jpg"
           width={100}
           height={100}
           className="absolute top-0 left-0 w-[100vw] h-[100vh] z-10 object-cover"
@@ -53,14 +53,14 @@ bg-gradient-radial  from-[#1c327a,#1c327af8] to-[#12dee657]"
             >
               <Image src="/fsu.png" width={200} height={200} alt="fsu" />
             </motion.div>
-            <h3 className="font-bold text-2xl uppercase mb-3">
+            <h3 className="font-bold text-2xl uppercase mb-3 font-[Montserrat]">
               Free Student Union
             </h3>
-            <p className="text-lg mb-10">
+            <p className="text-lg mb-10 font-[Montserrat]">
               Get access to the portal by signing in
             </p>
             <form className="flex flex-col gap-10 w-[90%] ">
-              <div className="flex flex-row items-center justify-center">
+              <div className="flex flex-row items-center justify-center font-[Montserrat]">
                 <label htmlFor="email" className=" text-white">
                   <svg
                     viewBox="0 0 15 15"
@@ -86,7 +86,7 @@ bg-gradient-radial  from-[#1c327a,#1c327af8] to-[#12dee657]"
                   className="group outline-none w-[20rem] p-2 ml-5 rounded-lg bg-[#13d3fa38] shadow-xl text-white placeholder:text-[#ffffff7a] "
                 />
               </div>
-              <div className="flex flex-row items-center justify-center">
+              <div className="flex flex-row items-center justify-center font-[Montserrat]">
                 <label htmlFor="password" className="text-white">
                   <svg
                     viewBox="0 0 15 15"
@@ -111,7 +111,7 @@ bg-gradient-radial  from-[#1c327a,#1c327af8] to-[#12dee657]"
                   className="outline-none w-[20rem] p-2 ml-5 rounded-lg bg-[#13d3fa38] shadow-xl text-white placeholder:text-[#ffffff7a] "
                 />
               </div>
-              <div className="flex flex-row items-center justify-center">
+              <div className="flex flex-row items-center justify-center font-[Montserrat]">
                 <label htmlFor="password" className="text-white">
                   <svg
                     viewBox="0 0 15 15"
@@ -136,6 +136,7 @@ bg-gradient-radial  from-[#1c327a,#1c327af8] to-[#12dee657]"
                   className="outline-none w-[20rem] p-2 ml-5 rounded-lg bg-[#13d3fa38] shadow-xl text-white placeholder:text-[#ffffff7a] "
                 />
               </div>
+              <div className="flex flex-row items-center justify-center gap-5">
               <Link href="/portal">
                 <motion.div
                   whileHover={{ scale: 1.1 }}
@@ -144,13 +145,27 @@ bg-gradient-radial  from-[#1c327a,#1c327af8] to-[#12dee657]"
                     stiffness: 400,
                     damping: 6,
                   }}
-                  className="rounded-lg w-[10rem] flex justify-center py-2 mx-auto shadow-lg bg-[#11f7f7] text-[#152425]  hover:text-[#ffffff] hover:shadow-2xl hover:shadow-[#1ffaef8f]  "
+                  className="rounded-lg w-max flex justify-center py-2 px-12 mx-auto shadow-lg bg-[#11f7f7] text-[#152425]  hover:text-[#ffffff] hover:shadow-2xl hover:shadow-[#1ffaef8f]  font-[Poppins]"
                 >
                   Sign In
                 </motion.div>
               </Link>
+              <Link href="/">
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 6,
+                  }}
+                  className="rounded-lg w-max flex justify-center py-2 px-10 mx-auto shadow-lg bg-[#11f7f7] text-[#152425]  hover:text-[#ffffff] hover:shadow-2xl hover:shadow-[#1ffaef8f]  font-[Poppins]"
+                >
+                  Go Back
+                </motion.div>
+              </Link>
+              </div>
 
-              <div className="w-full flex justify-center mb-2">
+              <div className="w-full flex justify-center mb-2 font-[Montserrat]">
                 Already have an account?{" "}
                 <button
                   onClick={handleClick}
