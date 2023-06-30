@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 const Table = () => {
   const [filteredData, setFilteredData] = useState();
   const [groupSelected, setGroupSelected] = useState("all");
-  const [blank, setBlank] = useState(false);
   const [selectedPage, setSelectedPage] = useState(1);
   const [paginatedBtn, setPaginatedBtn] = useState(1);
 
