@@ -1,193 +1,168 @@
-import React from "react";
-import Image from "next/image";
-import { committee } from "@/api/committee";
-import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image"
+import React from "react"
+import { motion } from "framer-motion"
 
 const Third = () => {
-  const containerVariants = {
-    hidden: { opacity: 0, x: -200 },
-    show: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        delayChildren: 0.1,
-        staggerChildren: 0.25,
-      },
-    },
-  };
-  const itemVariants = {
-    hidden: { opacity: 0, x: -200 },
-    show: { opacity: 1, x: 0 },
-  };
-  const variants = {
-    hidden: { opacity: 0, y: -100 },
-    show: { opacity: 1, y: 0 },
-  };
   return (
-    <div className="h-[100%] w-[80%] my-10 flex flex-col items-center relative ">
-      <h3 className="text-center text-3xl ">Meet the team</h3>
-      {/* <motion.svg
-        initial={{ scale: 1, x: 0, y: 0 }}
-        drag
-        dragConstraints={{ left: -100, right: 1000, top: 0, bottom: 3000 }}
-        viewBox="0 0 900 900"
-        xmlns="http://www.w3.org/2000/svg"
-        className="absolute left-[20rem] -top-[4rem] z-10"
-      >
-        <path
-          d="M86,66Q76,82,59.5,81Q43,80,28,74Q13,68,13,50Q13,32,26.5,19Q40,6,58,11.5Q76,17,86,33.5Q96,50,86,66Z"
-          fill="#9b9b9b"
-        >
-          <animate
-            attributeName="d"
-            dur="10000ms "
-            repeatCount="indefinite"
-            values="
-              M83,71Q74,92,52,88.5Q30,85,24.5,67.5Q19,50,25.5,34.5Q32,19,52,15.5Q72,12,82,31Q92,50,83,71Z;
-              M77,68.5Q71,87,51.5,84.5Q32,82,18.5,66Q5,50,19,35Q33,20,49.5,21.5Q66,23,74.5,36.5Q83,50,77,68.5Z;
-              M76,65Q67,80,47.5,83.5Q28,87,18,68.5Q8,50,19,32.5Q30,15,51.5,12.5Q73,10,79,30Q85,50,76,65Z;
-              M77.5,63.5Q65,77,46.5,82.5Q28,88,20,69Q12,50,22,34.5Q32,19,53.5,13Q75,7,82.5,28.5Q90,50,77.5,63.5Z;
-              M85,70.5Q73,91,54,83.5Q35,76,23,63Q11,50,21,34Q31,18,50,17.5Q69,17,83,33.5Q97,50,85,70.5Z;
-              M82,69Q72,88,48.5,90Q25,92,16,71Q7,50,18,32Q29,14,49.5,15Q70,16,81,33Q92,50,82,69Z;
-              M84.5,67.5Q70,85,48.5,88Q27,91,16.5,70.5Q6,50,17,30.5Q28,11,49,13.5Q70,16,84.5,33Q99,50,84.5,67.5Z;
-              M82.5,69.5Q72,89,53,83Q34,77,25,63.5Q16,50,21,29.5Q26,9,46.5,14.5Q67,20,80,35Q93,50,82.5,69.5Z;
-
-              M84.5,67.5Q70,85,48.5,88Q27,91,16.5,70.5Q6,50,17,30.5Q28,11,49,13.5Q70,16,84.5,33Q99,50,84.5,67.5Z;
-              M82,69Q72,88,48.5,90Q25,92,16,71Q7,50,18,32Q29,14,49.5,15Q70,16,81,33Q92,50,82,69Z;
-              M85,70.5Q73,91,54,83.5Q35,76,23,63Q11,50,21,34Q31,18,50,17.5Q69,17,83,33.5Q97,50,85,70.5Z;
-              M77.5,63.5Q65,77,46.5,82.5Q28,88,20,69Q12,50,22,34.5Q32,19,53.5,13Q75,7,82.5,28.5Q90,50,77.5,63.5Z;
-              M76,65Q67,80,47.5,83.5Q28,87,18,68.5Q8,50,19,32.5Q30,15,51.5,12.5Q73,10,79,30Q85,50,76,65Z;
-              M77,68.5Q71,87,51.5,84.5Q32,82,18.5,66Q5,50,19,35Q33,20,49.5,21.5Q66,23,74.5,36.5Q83,50,77,68.5Z;
-              M83,71Q74,92,52,88.5Q30,85,24.5,67.5Q19,50,25.5,34.5Q32,19,52,15.5Q72,12,82,31Q92,50,83,71Z;
-              "
-          ></animate>
-        </path>
-      </motion.svg> */}
-      <motion.svg
-        initial={{ scale: 1, x: 100, y: 100 }}
-        animate={{
-          scale: 1,
-          x: [100, 300, 500, 800, 1200, 1500, 1200, 800, 400, 300, 200, 100],
-          y: [100, 150, 200, 500, 400, 300, 500, 800, 1000, 600, 300, 100],
-        }}
-        transition={{ duration: 120, repeat: "infinite" }}
-        viewBox="0 0 500 500"
-        xmlns="http://www.w3.org/2000/svg"
-        className="absolute -left-[10rem] -top-[10rem] "
-      >
-        <path
-          d="M86,66Q76,82,59.5,81Q43,80,28,74Q13,68,13,50Q13,32,26.5,19Q40,6,58,11.5Q76,17,86,33.5Q96,50,86,66Z"
-          fill="#42444b38"
-        >
-          <animate
-            attributeName="d"
-            dur="10000ms"
-            repeatCount="indefinite"
-            values="
-              M83,71Q74,92,52,88.5Q30,85,24.5,67.5Q19,50,25.5,34.5Q32,19,52,15.5Q72,12,82,31Q92,50,83,71Z;
-              M77,68.5Q71,87,51.5,84.5Q32,82,18.5,66Q5,50,19,35Q33,20,49.5,21.5Q66,23,74.5,36.5Q83,50,77,68.5Z;
-              M76,65Q67,80,47.5,83.5Q28,87,18,68.5Q8,50,19,32.5Q30,15,51.5,12.5Q73,10,79,30Q85,50,76,65Z;
-              M77.5,63.5Q65,77,46.5,82.5Q28,88,20,69Q12,50,22,34.5Q32,19,53.5,13Q75,7,82.5,28.5Q90,50,77.5,63.5Z;
-              M85,70.5Q73,91,54,83.5Q35,76,23,63Q11,50,21,34Q31,18,50,17.5Q69,17,83,33.5Q97,50,85,70.5Z;
-              M82,69Q72,88,48.5,90Q25,92,16,71Q7,50,18,32Q29,14,49.5,15Q70,16,81,33Q92,50,82,69Z;
-              M84.5,67.5Q70,85,48.5,88Q27,91,16.5,70.5Q6,50,17,30.5Q28,11,49,13.5Q70,16,84.5,33Q99,50,84.5,67.5Z;
-              M82.5,69.5Q72,89,53,83Q34,77,25,63.5Q16,50,21,29.5Q26,9,46.5,14.5Q67,20,80,35Q93,50,82.5,69.5Z;
-
-              M84.5,67.5Q70,85,48.5,88Q27,91,16.5,70.5Q6,50,17,30.5Q28,11,49,13.5Q70,16,84.5,33Q99,50,84.5,67.5Z;
-              M82,69Q72,88,48.5,90Q25,92,16,71Q7,50,18,32Q29,14,49.5,15Q70,16,81,33Q92,50,82,69Z;
-              M85,70.5Q73,91,54,83.5Q35,76,23,63Q11,50,21,34Q31,18,50,17.5Q69,17,83,33.5Q97,50,85,70.5Z;
-              M77.5,63.5Q65,77,46.5,82.5Q28,88,20,69Q12,50,22,34.5Q32,19,53.5,13Q75,7,82.5,28.5Q90,50,77.5,63.5Z;
-              M76,65Q67,80,47.5,83.5Q28,87,18,68.5Q8,50,19,32.5Q30,15,51.5,12.5Q73,10,79,30Q85,50,76,65Z;
-              M77,68.5Q71,87,51.5,84.5Q32,82,18.5,66Q5,50,19,35Q33,20,49.5,21.5Q66,23,74.5,36.5Q83,50,77,68.5Z;
-              M83,71Q74,92,52,88.5Q30,85,24.5,67.5Q19,50,25.5,34.5Q32,19,52,15.5Q72,12,82,31Q92,50,83,71Z;
-              "
-          ></animate>
-        </path>
-      </motion.svg>
-      {/* <motion.svg
-        initial={{ scale: 1, x: 1000, y: 1000 }}
-        animate={{
-          scale: 1,
-          x: [1000, 900, 800, 600, 500, 1300, 1000, 800, 400, 300, 200, 1000],
-          y: [1000, 850, 700, 400, 500, 400, 500, 800, 900, 600, 300, 1000],
-        }}
-        transition={{ duration: 120, repeat: "infinite" }}
-        viewBox="0 0 700 700"
-        xmlns="http://www.w3.org/2000/svg"
-        className="absolute -left-[10rem] -top-[10rem]  "
-      >
-        <path
-          d="M86,66Q76,82,59.5,81Q43,80,28,74Q13,68,13,50Q13,32,26.5,19Q40,6,58,11.5Q76,17,86,33.5Q96,50,86,66Z"
-          fill="#42444b38"
-        >
-          <animate
-            attributeName="d"
-            dur="10000ms"
-            repeatCount="indefinite"
-            values="
-              M83,71Q74,92,52,88.5Q30,85,24.5,67.5Q19,50,25.5,34.5Q32,19,52,15.5Q72,12,82,31Q92,50,83,71Z;
-              M77,68.5Q71,87,51.5,84.5Q32,82,18.5,66Q5,50,19,35Q33,20,49.5,21.5Q66,23,74.5,36.5Q83,50,77,68.5Z;
-              M76,65Q67,80,47.5,83.5Q28,87,18,68.5Q8,50,19,32.5Q30,15,51.5,12.5Q73,10,79,30Q85,50,76,65Z;
-              M77.5,63.5Q65,77,46.5,82.5Q28,88,20,69Q12,50,22,34.5Q32,19,53.5,13Q75,7,82.5,28.5Q90,50,77.5,63.5Z;
-              M85,70.5Q73,91,54,83.5Q35,76,23,63Q11,50,21,34Q31,18,50,17.5Q69,17,83,33.5Q97,50,85,70.5Z;
-              M82,69Q72,88,48.5,90Q25,92,16,71Q7,50,18,32Q29,14,49.5,15Q70,16,81,33Q92,50,82,69Z;
-              M84.5,67.5Q70,85,48.5,88Q27,91,16.5,70.5Q6,50,17,30.5Q28,11,49,13.5Q70,16,84.5,33Q99,50,84.5,67.5Z;
-              M82.5,69.5Q72,89,53,83Q34,77,25,63.5Q16,50,21,29.5Q26,9,46.5,14.5Q67,20,80,35Q93,50,82.5,69.5Z;
-
-              M84.5,67.5Q70,85,48.5,88Q27,91,16.5,70.5Q6,50,17,30.5Q28,11,49,13.5Q70,16,84.5,33Q99,50,84.5,67.5Z;
-              M82,69Q72,88,48.5,90Q25,92,16,71Q7,50,18,32Q29,14,49.5,15Q70,16,81,33Q92,50,82,69Z;
-              M85,70.5Q73,91,54,83.5Q35,76,23,63Q11,50,21,34Q31,18,50,17.5Q69,17,83,33.5Q97,50,85,70.5Z;
-              M77.5,63.5Q65,77,46.5,82.5Q28,88,20,69Q12,50,22,34.5Q32,19,53.5,13Q75,7,82.5,28.5Q90,50,77.5,63.5Z;
-              M76,65Q67,80,47.5,83.5Q28,87,18,68.5Q8,50,19,32.5Q30,15,51.5,12.5Q73,10,79,30Q85,50,76,65Z;
-              M77,68.5Q71,87,51.5,84.5Q32,82,18.5,66Q5,50,19,35Q33,20,49.5,21.5Q66,23,74.5,36.5Q83,50,77,68.5Z;
-              M83,71Q74,92,52,88.5Q30,85,24.5,67.5Q19,50,25.5,34.5Q32,19,52,15.5Q72,12,82,31Q92,50,83,71Z;
-              "
-          ></animate>
-        </path>
-      </motion.svg> */}
-      <div className="rounded p-4 text-center mx-10 xl:w-[50vw] flex flex-col items-center relative">
-        <div className="w-[100%] flex justify-center ">
-          <Image
-            src="/members/nabinstha.jpg"
-            alt="nabin Shrestha"
-            width={500}
-            height={300}
-            className="bg-black rounded-full object-cover w-[10rem] h-[10rem]"
-          />
-        </div>
-
-        <div className="min-w-[20%] max-w-full flex flex-col items-center bg-white rounded-xl shadow-xl px-4 py-1 mt-2 ">
-          <h3 className="text-xl font-bold text-center ">Nabin Shrestha</h3>
-          <p>President</p>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-4 lg:grid-cols-4 xl:grid-cols-6 gap-10">
-        {committee?.map((item) => (
-          <div
-            key={item.id}
-            className="rounded p-4 text-center flex flex-col justify-center relative"
-          >
-            <div className=" flex justify-center">
-              <Image
-                src={item.src}
-                alt={item.name}
-                width={150}
-                height={150}
-                className="bg-black w-[8rem] h-[8rem] object-cover rounded-full"
-              />
-            </div>
-            <div className="min-w-[40%] max-w-full flex flex-col items-center bg-white rounded-xl shadow-xl px-4 py-1 mt-2">
-              <h3 className="text-[0.6rem] font-bold text-center lg:text-[0.77rem]">
-                {item.name}
-              </h3>
-              <p className="lg:text-[0.7rem] text-[0.5rem]">{item.title}</p>
+    <section
+      id="about"
+      className="w-[100%] h-max bg-[#d3d2d236] text-white flex flex-col items-center gap-9 justify-center min-h-[100vh]">
+      <div className=" lg:w-[80%]  flex flex-col items-center justify-between mb-20 mt-40 relative gap-8">
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+          className="w-[90%] lg:w-[60%] justify-center relative right-0 top-0">
+          <div className="bg-white text-black rounded-lg">
+            <div className="flex flex-col p-4 items-center gap-10">
+              <motion.span
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 0.5 },
+                }}
+                className="font-bold text-3xl font-[Poppins]">
+                Welcome to the FSU Community!
+              </motion.span>
+              <motion.p
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: { delay: 0.25, duration: 0.5 },
+                }}
+                className="text-lg font-medium font-[Montserrat] text-justify mb-3 ">
+                We are a dynamic and progressive political organization
+                dedicated to representing and advocating for the rights and
+                interests of students in Nepal. Founded with the vision of
+                empowering students and fostering positive change within the
+                education system, FSU has been at the forefront of student
+                activism and advocacy since its inception. As an integral part
+                of the All Nepal National Free Students Union (ANNFSU), we work
+                tirelessly to address the issues faced by students across the
+                country. At FSU, we firmly believe that education is not only a
+                means to acquire knowledge but also a catalyst for social
+                transformation. Our primary goal is to ensure that every student
+                in Nepal has access to quality education, equal opportunities,
+                and a supportive learning environment. We strive to create a
+                platform where students can voice their concerns, engage in
+                constructive dialogue, and actively contribute to shaping
+                educational policies.
+              </motion.p>
             </div>
           </div>
-        ))}
+        </motion.div>
+        <div className="flex flex-col lg:flex-row gap-3">
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+            className="w-[90%] lg:w-[35%] h-max flex flex-col md:justify-between relative text-center top-0 mb-4 lg:mb-0 bg-background-color rounded-lg mx-auto">
+            <div className=" text-white p-4">
+              <span className="font-bold text-xl text-[#e8eaec] mb-2 uppercase font-[Poppins] ">
+                Message from Campus Chief
+              </span>
+              <div className=" p-4 flex flex-col justify-center items-center ">
+                <div className="w-[60%] h-[50%] overflow-hidden rounded-md">
+                  <Image
+                    alt="campus chief"
+                    src="/campuschief.jpg"
+                    width={800}
+                    height={100}
+                    className="scale-150"
+                  />
+                </div>
+                <div className="flex flex-col font-bold uppercase mt-4 items-center font-[Montserrat]">
+                  <span>Kaji Ram Karki</span>
+                  <span className="font-light uppercase">Campus Chief</span>
+                  <span className="font-light uppercase">
+                    IOE Purwanchal Campus
+                  </span>
+                </div>
+              </div>
+              <p className="font-light font-[Lobster] italic text-lg mt-2 mb-4 ">
+                "FSU is a vibrant and inclusive political organization dedicated
+                to representing the voices and concerns of students at our
+                campus. We believe that students have the power to shape their
+                own educational journey and contribute to positive change within
+                our institution."
+              </p>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+            className="w-[90%] lg:w-[35%] h-max flex flex-col md:justify-between relative text-center top-0 mb-4 lg:mb-0 bg-background-color rounded-lg mx-auto">
+            <div className=" text-white p-4">
+              <span className="font-bold text-xl text-[#e8eaec] mb-2 uppercase font-[Poppins] ">
+                Message from Deputy Campus Chief
+              </span>
+              <div className=" p-4 flex flex-col justify-center items-center ">
+                <div className="w-[60%] h-[50%] overflow-hidden rounded-md">
+                  <Image
+                    alt="anu sir"
+                    src="/anusir.jpg"
+                    width={200}
+                    height={50}
+                    // className="scale-150"
+                  />
+                </div>
+                <div className="flex flex-col font-bold uppercase mt-4 items-center font-[Montserrat]">
+                  <span>Anu Shrestha</span>
+                  <span className="font-light uppercase">
+                    Deputy Campus Chief
+                  </span>
+                  <span className="font-light uppercase">
+                    IOE Purwanchal Campus
+                  </span>
+                </div>
+              </div>
+              <p className="font-light font-[Lobster] italic text-lg mt-2 mb-4 ">
+                "FSU is a vibrant and inclusive political organization dedicated
+                to representing the voices and concerns of students at our
+                campus. We believe that students have the power to shape their
+                own educational journey and contribute to positive change within
+                our institution."
+              </p>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+            className="w-[90%] lg:w-[35%] h-max flex flex-col md:justify-between relative text-center top-0 mb-4 lg:mb-0 bg-background-color rounded-lg mx-auto">
+            <div className=" text-white p-4">
+              <span className="font-bold text-xl text-[#e8eaec] mb-2 uppercase font-[Poppins] ">
+                Message from President of FSU
+              </span>
+              <div className=" p-4 flex flex-col justify-center items-center ">
+                <div className="w-[60%] overflow-hidden rounded-md">
+                  <Image
+                    alt="campus chief"
+                    src="/members/nabinstha.jpg"
+                    width={200}
+                    height={10}
+                  />
+                </div>
+                <div className="flex flex-col font-bold uppercase mt-4 items-center font-[Montserrat]">
+                  <span>Nabin Shrestha</span>
+                  <span className="font-light uppercase">president</span>
+                  <span className="font-light uppercase">
+                    Free Student Union
+                  </span>
+                </div>
+              </div>
+              <p className="font-light font-[Lobster] italic text-lg mt-2 mb-4 ">
+                "FSU is a vibrant and inclusive political organization dedicated
+                to representing the voices and concerns of students at our
+                campus. We believe that students have the power to shape their
+                own educational journey and contribute to positive change within
+                our institution."
+              </p>
+            </div>
+          </motion.div>
+        </div>
       </div>
-    </div>
-  );
-};
+    </section>
+  )
+}
 
-export default Third;
+export default Third
