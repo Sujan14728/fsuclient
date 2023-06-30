@@ -4,16 +4,6 @@ import React from "react";
 
 const Footer = () => {
   return (
-    // <div className=" shadow-black shadow-sm text-center px-10 py-3 bg-white text-black">
-    //   Copyright © 2023 | Designed and developed by{" "}
-    //   <Link href="www.swikarneupane.com.np" className="hover:opacity-70">
-    //     Swikar
-    //   </Link>{" "}
-    //   and{" "}
-    //   <Link href="www.swikarneupane.com.np" className="hover:opacity-70">
-    //     Sujan
-    //   </Link>
-    // </div>
     <footer className="text-white body-font font-[Poppins]">
       <div className=" bg-background-color px-5 py-24 flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div className="md:w-[40%] lg:w-[20%] flex flex-col flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
@@ -29,6 +19,13 @@ const Footer = () => {
               </span>
             </div>
           </Link>
+          {/* <div>
+            <span>tel:</span>
+            <div className="flex flex-col">
+              <span>Email:</span>
+              <span>fsu.erc@ioepc.edu.np</span>
+            </div>
+          </div> */}
         </div>
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
           <div className="lg:w-1/3 md:w-1/2 w-full px-4">

@@ -43,51 +43,53 @@ const NoticeSlug = () => {
     timeZone: "Asia/Kathmandu",
   });
   return (
-    <>
-      {loading && (
-        <div className="h-[80vh] w-[100vw] flex justify-center items-center ">
-          <Image alt="loader" width={200} height={200} src="/spinner.gif" />
-        </div>
-      )}
-      {!loading && (
-        <div className="container mx-auto p-5 w-[100%] flex flex-col items-center ">
-          <div className="mb-14 ">
-            <motion.h1
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="text-4xl text-black font-extrabold font-[Arial]"
-            >
-              {news.title}
-            </motion.h1>
-            <div className="w-[100%] flex h-[4rem] items-center">
-              <Image
-                alt="clock icon"
-                width={20}
-                height={20}
-                src="/icons/calendar.png"
-                className="object-contain"
-              />
-              <span className="ml-2 font-semibold">{formattedDate}</span>
-            </div>
+    <div className="w-[100vw] flex justify-center">
+      <div className="w-[80%]  ">
+        {loading && (
+          <div className="h-[100vh] flex justify-center items-center ">
+            <Image alt="loader" width={200} height={200} src="/spinner.gif" />
           </div>
-          <div className="flex w-[100%] justify-around ">
-            <div className="w-[100%] md:w-[60%]">
-              {news.image && (
-                <img
-                  alt="notice image"
-                  src={`${news.image}`}
-                  className="cursor-pointer"
+        )}
+        {!loading && (
+          <div className="w-[100%] flex flex-col items-center mt-20 mb-20 ">
+            <div className="mb-14 ">
+              <motion.h1
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="text-4xl text-black font-extrabold font-[Arial]"
+              >
+                {news.title}
+              </motion.h1>
+              <div className="w-[100%] flex h-[4rem] items-center">
+                <Image
+                  alt="clock icon"
+                  width={20}
+                  height={20}
+                  src="/icons/calendar.png"
+                  className="object-contain"
                 />
-              )}
+                <span className="ml-2 font-semibold">{formattedDate}</span>
+              </div>
             </div>
-            <div className="container hidden lg:flex md:w-[30%]  px-5 py-4 h-max">
-              <RecentNotice />
+            <div className="flex w-[100%] justify-around ">
+              <div className="w-[100%] md:w-[60%]">
+                {news.image && (
+                  <img
+                    alt="notice image"
+                    src={`${news.image}`}
+                    className="cursor-pointer"
+                  />
+                )}
+              </div>
+              <div className="container hidden lg:flex md:w-[30%]  px-5 py-4 h-max">
+                <RecentNotice />
+              </div>
             </div>
           </div>
-        </div>
-      )}
-    </>
+        )}
+      </div>
+    </div>
   );
 };
 

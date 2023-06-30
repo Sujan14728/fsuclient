@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { AnimatePresence, motion } from "framer-motion"
-import Signin from "./Signin"
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import Signin from "./Signin";
 
 const Login = () => {
-  const [loginPage, setLoginPage] = useState(true)
+  const [loginPage, setLoginPage] = useState(true);
 
   const handleClick = () => {
-    setLoginPage(!loginPage)
-  }
+    setLoginPage(!loginPage);
+  };
 
   return (
-    <div className="w-[100vw] h-[100vh] flex justify-center items-center ">
+    <div className="w-[100vw] h-[100vh] flex justify-center items-center relative ">
       <div className="absolute top-0 left-0 ">
         <Image
           alt="portal"
@@ -24,6 +24,9 @@ const Login = () => {
           priority
         />
       </div>
+      <Link href="/">
+        <div className="absolute top-10 left-10 z-30  rounded-full cursor-pointer bg-cover bg-[url('/icons/back.png')] hover:bg-[url('/icons/back-hover.png')] w-[3rem] h-[3rem] duration-300  "></div>
+      </Link>
       <div className="z-20">
         {loginPage ? (
           <motion.div
@@ -33,8 +36,9 @@ const Login = () => {
               y: 0,
             }}
             transition={{ delay: 0.25, duration: 0.75 }}
-            className="flex flex-col text-white border-2 md:h-[38rem] md:w-[38rem] justify-center items-center shadow-lg rounded-lg z-[100] 
-        bg-gradient-radial  from-[#1c327a,#1c327af8] to-[#12dee657]">
+            className="flex flex-col text-white md:h-[38rem] md:w-[38rem] justify-center items-center shadow-lg rounded-lg z-[100] 
+        bg-gradient-radial  from-[#1c327a,#1c327af8] to-[#12dee657]"
+          >
             <motion.div
               initial={{ y: -400, opacity: 0 }}
               animate={{
@@ -47,7 +51,8 @@ const Login = () => {
                   damping: 10,
                   duration: 2,
                 },
-              }}>
+              }}
+            >
               <Image src="/fsu.png" width={200} height={200} alt="fsu" />
             </motion.div>
             <h3 className="font-bold text-2xl uppercase mb-3 font-[Montserrat]">
@@ -64,10 +69,12 @@ const Login = () => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     width="23"
-                    height="23">
+                    height="23"
+                  >
                     <path
                       d="M.5 4.5l7 4 7-4m-13-3h12a1 1 0 011 1v10a1 1 0 01-1 1h-12a1 1 0 01-1-1v-10a1 1 0 011-1z"
-                      stroke="currentColor"></path>
+                      stroke="currentColor"
+                    ></path>
                   </svg>
                 </label>
                 <motion.input
@@ -88,10 +95,12 @@ const Login = () => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     width="23"
-                    height="23">
+                    height="23"
+                  >
                     <path
                       d="M12.5 8.5v-1a1 1 0 00-1-1h-10a1 1 0 00-1 1v6a1 1 0 001 1h10a1 1 0 001-1v-1m0-4h-4a2 2 0 100 4h4m0-4a2 2 0 110 4m-9-6v-3a3 3 0 016 0v3m2.5 4h1m-3 0h1m-3 0h1"
-                      stroke="currentColor"></path>
+                      stroke="currentColor"
+                    ></path>
                   </svg>
                 </label>
                 <motion.input
@@ -105,38 +114,40 @@ const Login = () => {
                 />
               </div>
               <div className="flex flex-row items-center justify-center gap-5">
-
-              <Link href="/portal">
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 400,
-                    damping: 6,
-                  }}
-                  className="rounded-lg w-max flex justify-center py-2 px-12 mx-auto shadow-lg bg-[#11f7f7] text-[#152425]  hover:text-[#ffffff] hover:shadow-2xl hover:shadow-[#1ffaef8f] font-[Poppins]">
-                  Login
-                </motion.div>
-              </Link>
-              <Link href="/">
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 400,
-                    damping: 6,
-                  }}
-                  className="rounded-lg w-max flex justify-center py-2 px-10 mx-auto shadow-lg bg-[#11f7f7] text-[#152425]  hover:text-[#ffffff] hover:shadow-2xl hover:shadow-[#1ffaef8f]  font-[Poppins]">
-                  Go Back
-                </motion.div>
-              </Link>
+                <Link href="/portal">
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 6,
+                    }}
+                    className="rounded-lg w-max flex justify-center py-2 px-12 mx-auto shadow-lg bg-[#11f7f7] text-[#152425]  hover:text-[#ffffff] hover:shadow-2xl hover:shadow-[#1ffaef8f] font-[Poppins]"
+                  >
+                    Login
+                  </motion.div>
+                </Link>
+                {/* <Link href="/">
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 6,
+                    }}
+                    className="rounded-lg w-max flex justify-center py-2 px-10 mx-auto shadow-lg bg-[#11f7f7] text-[#152425]  hover:text-[#ffffff] hover:shadow-2xl hover:shadow-[#1ffaef8f]  font-[Poppins]"
+                  >
+                    Go Back
+                  </motion.div>
+                </Link> */}
               </div>
 
               <div className="w-full flex justify-center font-[Montserrat]">
                 Don&apos;t have an account?{" "}
                 <button
                   onClick={handleClick}
-                  className="cursor-pointer duration-300 text-[#47d1fc] hover:text-[#3dfded] ml-2">
+                  className="cursor-pointer duration-300 text-[#47d1fc] hover:text-[#3dfded] ml-2"
+                >
                   Sign up
                 </button>
               </div>
@@ -147,7 +158,7 @@ const Login = () => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

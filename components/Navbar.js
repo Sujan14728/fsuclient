@@ -6,11 +6,13 @@ import Sidebar from "./Sidebar"
 import { useRouter } from "next/router"
 
 const Navbar = () => {
+
   const router = useRouter()
   const path = router.pathname
   const [openNav, setOpenNav] = useState(false)
   const [openClass, setOpenClass] = useState(false)
   const [colorChange, setColorchange] = useState(false)
+
 
   const changeNavbarColor = () => {
     console.log("scrolled")
@@ -148,12 +150,13 @@ const Navbar = () => {
               }`}>
               Class Details
               {/* <motion.img
+
                 src="/icons/down.png"
                 className={`scale-x-0 group-hover:scale-x-100 duration-300 object-contain ml-1`}
                 width={10}
                 height={10}
               /> */}
-              {/* <span className="group-hover:flex hidden flex-col absolute top-16 -left-[50%] w-[14rem] rounded-2xl text-[#ffffff] bg-[#EC6936]  justify-center items-center ">
+                {/* <span className="group-hover:flex hidden flex-col absolute top-16 -left-[50%] w-[14rem] rounded-2xl text-[#ffffff] bg-[#EC6936]  justify-center items-center ">
                 <Link
                   href="/class/routine"
                   className="py-2 w-[100%] flex justify-center  hover:text-white"
