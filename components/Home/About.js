@@ -8,7 +8,7 @@ const About = () => {
       id="about"
       className="w-[100%] h-max bg-[#d3d2d236] text-white flex justify-center min-h-[100vh]"
     >
-      <div className=" lg:w-[80%]  flex lg:flex-row flex-col items-center lg:items-stretch justify-between mb-20 mt-20 relative ">
+      <div className=" lg:w-[80%]  flex lg:flex-row flex-col items-center lg:items-stretch justify-between mb-20 mt-40 relative ">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
