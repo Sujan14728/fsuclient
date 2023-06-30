@@ -11,6 +11,7 @@ const Second = () => {
     >
       <motion.div
         initial={{ x: -100, opacity: 0 }}
+        viewport={{ once: true }}
         whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
         className="xl:w-[55%] w-[90%] flex flex-col items-center mt-4"
       >
@@ -39,6 +40,7 @@ const Second = () => {
       </motion.div>
       <motion.div
         initial={{ x: 100, opacity: 0 }}
+        viewport={{ once: true }}
         whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
         className="w-[80%] lg:w-[40%] "
       >

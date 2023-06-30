@@ -7,12 +7,13 @@ import { motion } from "framer-motion";
 const First = () => {
   return (
     <motion.div
-      className={`font-[Helvetica] w-[100%] h-[90vh] flex justify-center mt-10`}
+      className={`font-[Helvetica] w-[100%] min-h-[90vh] flex justify-center mt-10`}
     >
       <div className="w-[80%] flex flex-col xl:flex-row items-center ">
         <motion.div
           className="md:w-[60%]"
           initial={{ x: -100, y: -100 }}
+          viewport={{ once: true }}
           whileInView={{ x: 0, y: 0, transition: { duration: 1 } }}
         >
           <Image
@@ -25,16 +26,17 @@ const First = () => {
           />
         </motion.div>
         <motion.div
-          className="flex flex-col items-center md:w-[50%] mt-10 h-max"
+          className="flex flex-col items-center w-[90%] md:w-[80%] mt-10 h-max"
           initial={{ x: 100, y: -100 }}
+          viewport={{ once: true }}
           whileInView={{ x: 0, y: 0, transition: { duration: 1 } }}
         >
           {/* bg-gradient-to-r from-[#48408d] to-[#108cf1dc] */}
-          <span className="text-[#F0885E] text-lg font-sans font-semibold mb-2 ">
+          <span className="text-[#F0885E] text-lg font-sans font-semibold mb-2 text-justify ">
             Empowering students. Advocating for change. Creating a better
             future.
           </span>
-          <h1 className="text-[3rem] md:text-[3rem] uppercase font-extrabold text-[#494848] rounded w-max py-3 font-[Montserrat] leading-3 ">
+          <h1 className="text-[1.5rem] md:text-[3rem] uppercase font-extrabold text-[#494848] rounded w-max py-3 font-[Montserrat] leading-3 ">
             Free Student Union
           </h1>
           <p className="uppercase text-base md:text-xl text-[#777676] mb-5 mt-2 font-[Poppins]">
