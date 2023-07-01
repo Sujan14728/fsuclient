@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="text-white body-font font-[Poppins]">
       <div className=" bg-background-color px-5 py-24 flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-        <div className="md:w-[40%] lg:w-[20%] flex flex-col flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <div className="md:w-[40%] lg:w-[20%] flex flex-col flex-shrink-0 md:mx-0 mx-auto text-center md:text-left gap-5">
           <Link
             href="/"
             className="flex title-font font-medium items-center md:justify-start justify-center text-white"
@@ -19,13 +19,16 @@ const Footer = () => {
               </span>
             </div>
           </Link>
-          {/* <div>
-            <span>tel:</span>
+          <div className="flex flex-col title-font font-medium justify-center md:items-start md:ml-5 items-center text-white">
             <div className="flex flex-col">
-              <span>Email:</span>
+              <span className="text-[#cc8747] ">telephone:</span>
+              <span>9812345678</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-[#cc8747] ">Email:</span>
               <span>fsu.erc@ioepc.edu.np</span>
             </div>
-          </div> */}
+          </div>
         </div>
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
           <div className="lg:w-1/3 md:w-1/2 w-full px-4">
@@ -73,16 +76,22 @@ const Footer = () => {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-white hover:text-[#65d8ec79]">First Link</a>
+                <a className="text-white hover:text-[#65d8ec79]">
+                  Class Details
+                </a>
               </li>
               <li>
-                <a className="text-white hover:text-[#65d8ec79]">Second Link</a>
+                <a className="text-white hover:text-[#65d8ec79]">
+                  IOE Admission
+                </a>
               </li>
               <li>
-                <a className="text-white hover:text-[#65d8ec79]">Third Link</a>
+                <a className="text-white hover:text-[#65d8ec79]">
+                  Institute of Engineering
+                </a>
               </li>
               <li>
-                <a className="text-white hover:text-[#65d8ec79]">Fourth Link</a>
+                <a className="text-white hover:text-[#65d8ec79]">Portal</a>
               </li>
             </nav>
           </div>
@@ -92,16 +101,20 @@ const Footer = () => {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-white hover:text-[#65d8ec79]">First Link</a>
+                <a className="text-white hover:text-[#65d8ec79]">Project</a>
               </li>
               <li>
-                <a className="text-white hover:text-[#65d8ec79]">Second Link</a>
+                <a className="text-white hover:text-[#65d8ec79]">
+                  Teacher's Details
+                </a>
               </li>
               <li>
-                <a className="text-white hover:text-[#65d8ec79]">Third Link</a>
+                <a className="text-white hover:text-[#65d8ec79]">New Notice</a>
               </li>
               <li>
-                <a className="text-white hover:text-[#65d8ec79]">Fourth Link</a>
+                <a className="text-white hover:text-[#65d8ec79]">
+                  Complain Box
+                </a>
               </li>
             </nav>
           </div>

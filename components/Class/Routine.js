@@ -1,31 +1,31 @@
-import React, { useEffect, useState } from "react"
-import { routine } from "@/api/routine"
-import RoutineCard from "./RoutineCard"
-import { AnimatePresence, motion } from "framer-motion"
+import React, { useEffect, useState } from "react";
+import { routine } from "@/api/routine";
+import RoutineCard from "./RoutineCard";
+import { AnimatePresence, motion } from "framer-motion";
 const Routine = () => {
-  const [year, setYear] = useState("")
-  const [faculty, setFaculty] = useState("all")
-  const [filteredRoutine, setFilteredRoutine] = useState(null)
+  const [year, setYear] = useState("");
+  const [faculty, setFaculty] = useState("all");
+  const [filteredRoutine, setFilteredRoutine] = useState(null);
   const handleFilter = () => {
     let filter = routine.filter((item) => {
       if (
         (year == item.year + "/" + item.semester && faculty == item.faculty) ||
         (year == "all" && faculty == item.faculty)
       ) {
-        return item
+        return item;
       } else {
-        return null
+        return null;
       }
-    })
-    setFilteredRoutine(filter)
-  }
+    });
+    setFilteredRoutine(filter);
+  };
 
   useEffect(() => {
-    handleFilter()
-  }, [year, faculty])
+    handleFilter();
+  }, [year, faculty]);
 
   return (
-    <div className="w-[80%] lg:w-[60%] bg-white h-max">
+    <div className="w-[100%] lg:w-[60%] bg-white h-max">
       <div className="h-[40rem] flex flex-col items-center shadow-lg rounded-xl py-8 ">
         <h1 className="text-2xl font-bold text-[#314c96] font-[Montserrat]">
           Search Your Routine
@@ -37,8 +37,9 @@ const Routine = () => {
             className="w-[8rem] h-[2rem] rounded-lg px-2 bg-white text-[#314c96] border-2 border-[#314c96] font-[Poppins]"
             value={year}
             onChange={(e) => {
-              setYear(e.target.value)
-            }}>
+              setYear(e.target.value);
+            }}
+          >
             <option value="" hidden>
               Year
             </option>
@@ -60,8 +61,9 @@ const Routine = () => {
             value={faculty}
             className="w-[8rem] h-[2rem] rounded-lg px-2 bg-white text-[#314c96] border-2 border-[#314c96] font-[Poppins]"
             onChange={(e) => {
-              setFaculty(e.target.value)
-            }}>
+              setFaculty(e.target.value);
+            }}
+          >
             <option value="all" hidden>
               Faculty
             </option>
@@ -81,7 +83,7 @@ const Routine = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Routine
+export default Routine;
