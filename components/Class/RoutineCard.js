@@ -8,11 +8,11 @@ import { useOutsideClick } from "@/customHooks/useOutsideClick";
 
 const RoutineCard = ({ item }) => {
   const [selectedId, setSelectedId] = useState(null);
+  const [click, setClick] = useState(false);
   const handleOutsideClick = () => {
-    let count = 1;
-    if (count != 1) {
+    if (click) {
       setSelectedId(null);
-      count++;
+      setClick(!click);
     }
   };
   const ref = useOutsideClick(handleOutsideClick);
@@ -55,13 +55,17 @@ const RoutineCard = ({ item }) => {
                 Routine of {item.faculty} {item.year + "/" + item.semester}
               </motion.h5>
               <div className=" w-[30rem] h-[40rem] bg-[#272c6e] mt-5 rounded-xl shadow-xl ">
-                <Image
-                  alt="routine"
-                  width={100}
-                  height={100}
-                  src={item.image}
-                  className="w-[30rem] h-[40rem] object-cover rounded-lg"
-                />
+                <Link href={item.image} target="_blank">
+                  <Image
+                    alt="routine"
+                    width={100}
+                    height={100}
+                    src={item.image}
+                    className="w-[30rem] h-[40rem] object-contain rounded-lg"
+                    unoptimized
+                    priority
+                  />
+                </Link>
               </div>
               <motion.button
                 className="absolute right-5 top-5 "
