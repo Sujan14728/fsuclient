@@ -156,32 +156,30 @@ const Third = () => {
           >
             <div className=" text-white mt-4">
               <span className="font-bold text-xl text-[#e8eaec] mb-2 uppercase font-[Poppins] ">
-                Message from President of FSU
+                Message from H.o.d. of computer and electronics department
               </span>
               <div className=" p-4 flex flex-col justify-center items-center ">
                 <div className="lg:w-[60%] flex justify-center items-center overflow-hidden rounded-md">
                   <Image
                     alt="campus chief"
-                    src="/members/nabinstha.jpg"
+                    src="/mkg.jpg"
                     width={200}
                     height={10}
                     className="object-cover w-[24rem] h-[16rem]"
                   />
                 </div>
                 <div className="flex flex-col font-bold uppercase mt-4 items-center font-[Montserrat] ">
-                  <span>Nabin Shrestha</span>
-                  <span className="font-light uppercase">president</span>
+                  <span>Manoj Kumar Guragain</span>
+                  <span className="font-light uppercase">Head of department</span>
                   <span className="font-light uppercase">
-                    Free Student Union
+                    COmputer and electronics engineering
                   </span>
                 </div>
               </div>
               <p className="font-light font-[Lobster] italic text-lg mt-2 mb-4  text-justify px-4">
                 "FSU is a vibrant and inclusive political organization dedicated
                 to representing the voices and concerns of students at our
-                campus. We believe that students have the power to shape their
-                own educational journey and contribute to positive change within
-                our institution."
+                campus. It helps each and every one of student in IOE Purwanchal Campus."
               </p>
             </div>
           </motion.div>
