@@ -166,6 +166,7 @@ const Third = () => {
                     width={200}
                     height={10}
                     className="object-cover w-[24rem] h-[16rem]"
+                    unoptimized
                   />
                 </div>
                 <div className="flex flex-col font-bold uppercase mt-4 items-center font-[Montserrat] ">

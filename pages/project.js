@@ -44,7 +44,7 @@ const Project = () => {
   }, [selectedOption])
 
   return (
-    <div className=" w-[100%] flex flex-col items-center mb-10 ">
+    <div className=" w-[100%] flex flex-col items-center mb-10 min-h-[50vh] ">
       <div className="flex w-[80%] justify-center mt-10 ">
         <div
           className="bg-background-color p-1 font-[Poppins] text-white rounded-lg"

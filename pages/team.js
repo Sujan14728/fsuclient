@@ -153,6 +153,7 @@ const Team = () => {
             width={500}
             height={300}
             className="bg-black rounded-lg object-cover w-[30rem] h-[30rem]"
+            unoptimized
           />
         </div>
 
