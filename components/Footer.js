@@ -21,12 +21,14 @@ const Footer = () => {
           </Link>
           <div className="flex flex-col title-font font-medium justify-center md:items-start md:ml-5 items-center text-white">
             <div className="flex flex-col">
-              <span className="text-[#cc8747] ">telephone:</span>
-              <span>9812345678</span>
+              <span className="text-[#cc8747] ">Telephone:</span>
+              <a href="tel:9812345678">9812345678</a>
             </div>
             <div className="flex flex-col">
               <span className="text-[#cc8747] ">Email:</span>
-              <span>fsu.erc@ioepc.edu.np</span>
+              <a href="mailto:fsu.erc@ioepc.edu.np" target="_blank">
+                fsu.erc@ioepc.edu.np
+              </a>
             </div>
           </div>
         </div>
